@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    width: 100vw;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.spotyphy {
+    width: 100%;
+    color: white;
+    background: #000;
+    width: 100%;
+}
+
+
+#secondPage{
+    display: none;
+}
+
+:root {
+    --color-white: white;
+    --color-black: black;
+    --border: white;
+}
+
+
+.pageStarting {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, black, rgb(71, 71, 71));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+
+}
+
+.pageStarting>img {
+    margin-top: 20vh;
+    border-radius: 100px;
+    border: 5px solid rgba(42, 207, 42, 0.945);
+    margin-bottom: 14px;
+}
+
+.pageStarting>span {
+    font-size: 35px;
+}
+
+.sign-up {
+    margin: auto auto 0 auto;
+    width: 78vmin;
+    background-color: rgba(42, 207, 42, 0.945);
+    color: var(--color-black);
+    height: 54px;
+    border-radius: 28px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.log-in {
+    font-size: 20px;
+    margin-top: 2vh;
+    font-weight: 700;
+    height: 54px;
+    width: 78vmin;
+    border: var(--border) 1px solid;
+    border-radius: 28px;
+    background-color: transparent;
+    color: var(--color-white);
+
+}
+
+.sign-up-name {
+    margin: auto auto 0 auto;
+    width: 78vmin;
+    background-color: rgba(42, 207, 42, 0.945);
+    color: var(--color-black);
+    height: 54px;
+    border-radius: 28px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.log-in-number {
+    font-size: 20px;
+    margin-top: 2vh;
+    font-weight: 700;
+    height: 54px;
+    width: 78vmin;
+    border: var(--border) 1px solid;
+    border-radius: 28px;
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+.log-in-email {
+    font-size: 20px;
+    margin-top: 2vh;
+    font-weight: 700;
+    height: 54px;
+    width: 78vmin;
+    border: var(--border) 1px solid;
+    border-radius: 28px;
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+
+.sign-up:active,
+.sign-up-name:active {
+    transform: scale(0.95);
+    background-color: rgba(53, 163, 53, 0.938);
+
+}
+
+.sign-up-name::placeholder {
+    color: black;
+}
+
+.log-in:active,
+.log-in-number:active,
+.log-in-email:active {
+    transform: scale(0.95);
+    background-color: rgba(211, 214, 211, 0.363);
+}
+
+.log-in::placeholder,
+.log-in-number::placeholder,
+.log-in-email::placeholder {
+    color: white;
+}
+
+
+
+
+
+
+
+.details-submit {
+    width: 50vmin;
+    margin-top: 3vh;
+    background-color: rgb(71, 71, 71);
+
+    font-size: 20px;
+    font-weight: 700;
+    height: 54px;
+    border: var(--border) 1px solid;
+    border-radius: 28px;
+    color: var(--color-white);
+
+}
+
+
+.login-margin {
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (orientation: landscape) {
+    .pageStarting {
+        height: 100vh;
+    }
+
+    .pageStarting>img {
+        position: relative;
+        margin-top: 19vh;
+        right: 24%;
+    }
+
+    .pageStarting>span {
+        position: relative;
+        right: 24%;
+    }
+
+
+    .sign-up{
+        position: fixed;
+        left: 56%;
+        margin-top: 29vh;
+
+    }
+
+    .log-in {
+        position: fixed;
+        left: 56%;
+        margin-top: calc(29vh + 90px);
+    }
+
+    .login-margin {
+        margin-bottom: 6vh;
+    }
+
+
+
+
+
+
+    .sign-up-name {
+        position: fixed;
+        left: 56%;
+        margin-top: 11vh;
+
+    }
+    .log-in-number {
+        position: fixed;
+        left: 56%;
+        margin-top: calc(11vh + 70px);
+    }
+    .log-in-email {
+        position: fixed;
+        left: 56%;
+        margin-top: calc(11vh + 140px);
+    }
+    .details-submit {
+        width: 78vmin;
+        position: fixed;
+        left: 56%;
+        margin-top:calc(11vh + 210px);
+    }
+
+
+
+
+    
+}
