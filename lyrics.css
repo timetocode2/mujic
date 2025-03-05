@@ -55,7 +55,7 @@
     border-radius: 10px;
     width: 40vw;
     height: 40px;
-    margin: 10px auto;
+    margin: 10px 10px;
     position: relative;
     top: 20vw;
     display: none;
@@ -85,6 +85,12 @@ span.headingInLyrics {
 }
 
 
+.contOfLyricsDiv {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
@@ -97,10 +103,6 @@ span.headingInLyrics {
         position: absolute;
         top: 0;
         width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         border: white 5px solid;
     }
     

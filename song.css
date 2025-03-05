@@ -174,6 +174,21 @@
 
 
 
+.divExtraBali{
+    width: 100%;
+    height:160px;
+    background-color: transparent;
+    position: relative;
+    top: 120px;
+}
+.divExtraBali2{
+    width: 100%;
+    height:160px;
+    background-color: transparent;
+    position: relative;
+    top: 25vw;
+    display: none;
+}
 
 
 @media screen and (orientation: landscape) {
@@ -203,18 +218,12 @@ border-width: 1px 1px 0px 1px;
     right: 41%;
 }
 
-
-
-
-}
-
-
 .divExtraBali{
-    width: 100%;
-    height:160px;
-    background-color: transparent;
-    position: relative;
-    top: 120px;
     border: blue solid;
     border-width: 0px 1px 1px 1px;
+
+}
+.divExtraBali2{
+    display: none;
+}
 }

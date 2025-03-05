@@ -42,7 +42,46 @@ function validateForm() {
 
 
 
+const homeMenu = document.getElementById('homeMenu');
+const exploreMenu = document.getElementById('exploreMenu');
+const likesMenu = document.getElementById('likesMenu');
+const preMenu = document.getElementById('preMenu');
 
+
+
+function HomeCloser(){
+  profileAndName.style.setProperty('display', 'none', 'important');
+  contMain.style.setProperty('display', 'none', 'important');
+  search.style.setProperty('display', 'none', 'important');
+  divExtraBali.style.setProperty('border', 'none');
+  container.style.setProperty('border', 'none');
+};
+function HomeLoader(){
+  profileAndName.style.setProperty('display', 'flex');
+  contMain.style.setProperty('display', 'flex');
+  search.style.setProperty('display', 'inherit');
+  divExtraBali.style.setProperty('border', '');
+  container.style.setProperty('border', '');
+}
+
+
+
+homeMenu.addEventListener('click', ()=>{
+  HomeLoader();
+  if(window.getComputedStyle(lyricsdivmain1).display === "flex"){
+    closeLyrics();
+  };
+});
+
+exploreMenu.addEventListener('click', ()=>{
+  HomeCloser();
+});
+likesMenu.addEventListener('click', ()=>{
+  HomeCloser();
+});
+preMenu.addEventListener('click', ()=>{
+  HomeCloser();
+});
 
 
 
@@ -91,10 +130,13 @@ const musicplay = document.getElementById('musicplay');
 
 const lyrics = document.getElementById('lyrics');
 const lyricsdivclose = document.getElementById('lyricsdivclose');
+const contOfLyricsDiv = document.getElementById('contOfLyricsDiv');
 const lyricsdivmain1 = document.getElementById('lyricsdivmain1');
 const lyricsdivmain2 = document.getElementById('lyricsdivmain2');
 const fullLyrics = document.getElementById('fullLyrics');
 const divExtraBali = document.querySelector('.divExtraBali');
+const divExtraBali2 = document.querySelector('.divExtraBali2');
+
 
 
 
@@ -193,17 +235,78 @@ song4.addEventListener("click", () => {
 
 lyrics.addEventListener('click', () => {
 
-  profileAndName.style.setProperty('display', 'none', 'important');
-  contMain.style.setProperty('display', 'none', 'important');
-  search.style.setProperty('display', 'none', 'important');
-  divExtraBali.style.setProperty('border', 'none');
-  container.style.setProperty('border', 'none');
-
+  if(window.getComputedStyle(lyricsdivmain1).display === "none"){
+  HomeCloser();
+  contOfLyricsDiv.style.setProperty('display', 'flex');
   lyricsdivmain1.style.setProperty('display', 'flex');
   lyricsdivmain2.style.setProperty('display', 'flex');
   fullLyrics.style.setProperty('display', 'flex');
   lyricsdivclose.style.setProperty('display', 'flex');
+  divExtraBali2.style.display="inherit";
+
+  }else{
+    closeLyrics();
+  };
+
 });
 
 
 
+
+
+
+//  time to close lyrics section
+function closeLyrics (){
+  HomeLoader();
+  contOfLyricsDiv.style.setProperty('display', 'flex');
+  lyricsdivmain1.style.setProperty('display', "none");
+  lyricsdivmain2.style.setProperty('display', "none");
+  fullLyrics.style.setProperty('display', "none");
+  lyricsdivclose.style.setProperty('display', "none");
+  divExtraBali2.style.display="";
+
+  if (fullLyrics.textContent === "Short Lyrics") {
+    lyricsdivmain1.style.width = "";
+    lyricsdivmain1.style.height = "";
+    lyricsdivmain2.style.width = "";
+    lyricsdivmain2.style.setProperty('margin','');
+    divExtraBali2.style.display="";
+    fullLyrics.textContent = "Full Lyrics";
+      }
+
+}
+
+closeMusicPlay.addEventListener('click', () => {
+
+  if (lyricsdivmain1.style.display === "flex") {
+    closeLyrics();
+  } else {
+    musicplay.style.setProperty('display', "none");
+    anyaudio.pause();
+    playPauseBtn.textContent = 'Play';
+  };
+});
+
+lyricsdivclose.addEventListener('click', ()=>{
+closeLyrics();
+});
+
+fullLyrics.addEventListener('click', ()=>{
+
+  if( fullLyrics.textContent === "Full Lyrics"){
+if (window.matchMedia("(orientation: portrait").matches) {
+lyricsdivmain1.style.width = "99%";
+lyricsdivmain1.style.height = "100%";
+lyricsdivmain2.style.width = "99%";
+lyricsdivmain2.style.setProperty('margin','10px 0px');
+fullLyrics.textContent = "Short Lyrics";
+}
+}else{
+  lyricsdivmain1.style.width = "";
+lyricsdivmain1.style.height = "";
+lyricsdivmain2.style.width = "";
+lyricsdivmain2.style.setProperty('margin','');
+fullLyrics.textContent = "Full Lyrics";
+
+}
+});
