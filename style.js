@@ -18,9 +18,9 @@ signUp.addEventListener("click", () => {
 
 
 function validateForm() {
-  let myEmail = document.getElementById("input-email").value;
+  // let myEmail = document.getElementById("input-email").value;
   let name = document.getElementById("input-name").value;
-  let number = document.getElementById("input-number").value;
+  // let number = document.getElementById("input-number").value;
 
   // if (name.trim() === "") {
   //     alert("Please enter your name.");
@@ -47,40 +47,102 @@ const exploreMenu = document.getElementById('exploreMenu');
 const likesMenu = document.getElementById('likesMenu');
 const preMenu = document.getElementById('preMenu');
 
+const footerMain = document.getElementById('footer-main');
+const exploreDiv = document.getElementById('explore-div');
+const premiumDiv = document.getElementById('premium-div');
 
 
-function HomeCloser(){
+function HomeCloser() {
   profileAndName.style.setProperty('display', 'none', 'important');
   contMain.style.setProperty('display', 'none', 'important');
   search.style.setProperty('display', 'none', 'important');
   divExtraBali.style.setProperty('border', 'none');
   container.style.setProperty('display', 'none', 'important');
 };
-function HomeLoader(){
+
+function HomeLoader() {
   profileAndName.style.setProperty('display', 'flex');
   contMain.style.setProperty('display', 'flex');
-  search.style.setProperty('display', 'inherit');
+  search.style.setProperty('display', 'flex');
   divExtraBali.style.setProperty('border', '');
   container.style.setProperty('display', 'flex');
 }
 
+function ExploreLoader() {
+  footerMain.style.setProperty('display', 'flex');
+  exploreDiv.style.display = 'flex';
+};
+
+function ExploreCloser() {
+  if (exploreDiv.style.display === 'flex') {
+    exploreDiv.style.display = 'none';
+  }
+};
+function PreLoader() {
+    footerMain.style.display = 'flex';
+  premiumDiv.style.display = 'flex';
+};
+
+function PreCloser() {
+  if (premiumDiv.style.display === 'flex') {
+    premiumDiv.style.display = 'none';
+  }
+};
 
 
-homeMenu.addEventListener('click', ()=>{
+
+
+homeMenu.addEventListener('click', () => {
   HomeLoader();
-  if(window.getComputedStyle(lyricsdivmain1).display === "flex"){
+  if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
     closeLyrics();
+  };
+  if (footerMain.style.display === 'flex') {
+    footerMain.style.display = 'none';
   };
 });
 
-exploreMenu.addEventListener('click', ()=>{
+exploreMenu.addEventListener('click', () => {
+  if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
+    closeLyrics();
+  };
+
   HomeCloser();
+
+  if (premiumDiv.style.display === 'flex') {
+    PreCloser();
+  };
+
+  ExploreLoader();
 });
-likesMenu.addEventListener('click', ()=>{
+
+likesMenu.addEventListener('click', () => {
+  if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
+    closeLyrics();
+  };
   HomeCloser();
+  if (exploreDiv.style.display = 'flex') {
+    ExploreCloser();
+  };
+  if (premiumDiv.style.display === 'flex') {
+    PreCloser();
+  };
+
 });
-preMenu.addEventListener('click', ()=>{
-  HomeCloser();
+
+preMenu.addEventListener('click', () => {
+  if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
+    closeLyrics();
+  };
+  if(window.getComputedStyle(container).display === "flex"){
+  HomeCloser();};
+
+  if (exploreDiv.style.display = 'flex') {
+    ExploreCloser();
+  };
+
+  PreLoader();
+
 });
 
 
@@ -156,11 +218,11 @@ function playaudio(audioId, thumbnail) {
     myaudio.play();
     playPauseBtn.textContent = 'Pause';
     musicplay.style.setProperty('display', "flex");
-  
-  }else {
+
+  } else {
     myaudio.pause();
     musicplay.style.setProperty('display', "none");
-  
+
   };
   anyaudio = myaudio;
   seekBar.value = "0";
@@ -235,16 +297,16 @@ song4.addEventListener("click", () => {
 
 lyrics.addEventListener('click', () => {
 
-  if(window.getComputedStyle(lyricsdivmain1).display === "none"){
-  HomeCloser();
-  contOfLyricsDiv.style.setProperty('display', 'flex');
-  lyricsdivmain1.style.setProperty('display', 'flex');
-  lyricsdivmain2.style.setProperty('display', 'flex');
-  fullLyrics.style.setProperty('display', 'flex');
-  lyricsdivclose.style.setProperty('display', 'flex');
-  divExtraBali2.style.display="inherit";
+  if (window.getComputedStyle(lyricsdivmain1).display === "none") {
+    HomeCloser();
+    contOfLyricsDiv.style.setProperty('display', 'flex');
+    lyricsdivmain1.style.setProperty('display', 'flex');
+    lyricsdivmain2.style.setProperty('display', 'flex');
+    fullLyrics.style.setProperty('display', 'flex');
+    lyricsdivclose.style.setProperty('display', 'flex');
+    divExtraBali2.style.display = "inherit";
 
-  }else{
+  } else {
     closeLyrics();
   };
 
@@ -256,23 +318,23 @@ lyrics.addEventListener('click', () => {
 
 
 //  time to close lyrics section
-function closeLyrics (){
+function closeLyrics() {
   HomeLoader();
-  contOfLyricsDiv.style.setProperty('display', 'flex');
+  contOfLyricsDiv.style.setProperty('display', 'none');
   lyricsdivmain1.style.setProperty('display', "none");
   lyricsdivmain2.style.setProperty('display', "none");
   fullLyrics.style.setProperty('display', "none");
   lyricsdivclose.style.setProperty('display', "none");
-  divExtraBali2.style.display="";
+  divExtraBali2.style.display = "";
 
   if (fullLyrics.textContent === "Short Lyrics") {
     lyricsdivmain1.style.width = "";
     lyricsdivmain1.style.height = "";
     lyricsdivmain2.style.width = "";
-    lyricsdivmain2.style.setProperty('margin','');
-    divExtraBali2.style.display="";
+    lyricsdivmain2.style.setProperty('margin', '');
+    divExtraBali2.style.display = "";
     fullLyrics.textContent = "Full Lyrics";
-      }
+  };
 
 }
 
@@ -287,26 +349,27 @@ closeMusicPlay.addEventListener('click', () => {
   };
 });
 
-lyricsdivclose.addEventListener('click', ()=>{
-closeLyrics();
+lyricsdivclose.addEventListener('click', () => {
+  closeLyrics();
 });
 
-fullLyrics.addEventListener('click', ()=>{
+fullLyrics.addEventListener('click', () => {
 
-  if( fullLyrics.textContent === "Full Lyrics"){
-if (window.matchMedia("(orientation: portrait").matches) {
-lyricsdivmain1.style.width = "99%";
-lyricsdivmain1.style.height = "100%";
-lyricsdivmain2.style.width = "99%";
-lyricsdivmain2.style.setProperty('margin','10px 0px');
-fullLyrics.textContent = "Short Lyrics";
-}
-}else{
-  lyricsdivmain1.style.width = "";
-lyricsdivmain1.style.height = "";
-lyricsdivmain2.style.width = "";
-lyricsdivmain2.style.setProperty('margin','');
-fullLyrics.textContent = "Full Lyrics";
+  if (fullLyrics.textContent === "Full Lyrics") {
+    if (window.matchMedia("(orientation: portrait").matches) {
+      lyricsdivmain1.style.width = "99%";
+      lyricsdivmain1.style.height = "100%";
+      lyricsdivmain2.style.width = "99%";
+      lyricsdivmain2.style.setProperty('margin', '10px 0px');
+      fullLyrics.textContent = "Short Lyrics";
+    }
+  } else {
+    lyricsdivmain1.style.width = "";
+    lyricsdivmain1.style.height = "";
+    lyricsdivmain2.style.width = "";
+    lyricsdivmain2.style.setProperty('margin', '');
+    fullLyrics.textContent = "Full Lyrics";
 
-}
+  }
 });
+

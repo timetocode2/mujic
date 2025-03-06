@@ -1,0 +1,105 @@
+.footer-main{
+    width: 100%;
+    height: 90vh;
+display: none;    
+justify-content: center;
+background: linear-gradient(to right, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+
+}
+
+.premium-div,
+.explore-div {
+    width: 100%;
+    height: 80vh;
+    /* position: fixed;
+    top: 0; */
+    display:none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+
+
+}
+
+
+
+
+
+/* premium bali buttns ccss start */
+.payment {
+    background: rgba(15, 15, 15, 0.9);
+    padding: 4rem 6rem;
+    border-radius: 1rem;
+    box-shadow:
+        0 0 40px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment-h1 {
+    color: #e5e5e5;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.payment-h1::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, #ffffff 50%, transparent 100%);
+}
+
+.button-container {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.premium-btn {
+    padding: 18px 35px;
+    font-size: 1.1em;
+    border: 1px white solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #142E66, #4A79C5);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.premium-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.premium-btn:active {
+    transform: translateY(0);
+}
+
+premium-div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
+}
+/* premiumDiv css khatam mere bhai*/
