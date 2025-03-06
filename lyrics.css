@@ -12,7 +12,6 @@
     overflow: scroll;
     border-radius: 8px;
     position: relative;
-    top: 20vw;
     display: none;
     padding: 15px;
     line-height: 25px;
@@ -41,8 +40,7 @@
     background-repeat: no-repeat;
     overflow: scroll;
     border-radius: 8px;
-    position: absolute;
-    top: 0;
+    position: relative;
     display: none;
 }
 
@@ -57,7 +55,6 @@
     height: 40px;
     margin: 10px 10px;
     position: relative;
-    top: 20vw;
     display: none;
     justify-content: center;
     align-items: center;

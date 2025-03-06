@@ -54,14 +54,14 @@ function HomeCloser(){
   contMain.style.setProperty('display', 'none', 'important');
   search.style.setProperty('display', 'none', 'important');
   divExtraBali.style.setProperty('border', 'none');
-  container.style.setProperty('border', 'none');
+  container.style.setProperty('display', 'none', 'important');
 };
 function HomeLoader(){
   profileAndName.style.setProperty('display', 'flex');
   contMain.style.setProperty('display', 'flex');
   search.style.setProperty('display', 'inherit');
   divExtraBali.style.setProperty('border', '');
-  container.style.setProperty('border', '');
+  container.style.setProperty('display', 'flex');
 }
 
 
