@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotyphy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="song.css">
-    <link rel="stylesheet" href="control.css">
-    <link rel="stylesheet" href="lyrics.css">
-    <link rel="stylesheet" href="otherButtons.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
 </head>
 
 <body>
@@ -42,157 +39,8 @@
                     id="details-submit">Submit</button>
             </div>
 
-            <!-- first page and second page has been completed.. -->
-            <!-- time to write our main containt page-->
 
-
-            <div class="container" id="container">
-                <div class="profileAndName" id="profileAndName">
-                    <div class="">
-                        <div class="profile flexcenter" id="profile">M</div>
-                        <div class="userName" id="userName">hello buddy how are you</div>
-                    </div>
-                    <div class="setting" id="setting"><img class="mysettingimage" src="media/settitng-icon.jpg" alt="no"
-                            width="100%">
-                    </div>
-                </div>
-                <input class="search" id="search" placeholder="What do you want to listen to">
-                <div class="cont-main" id="cont-main">
-
-                    <div class="songcard" id="songcard1">
-                        <div class="song" id="song1"
-                            onclick="playaudio('myaudio1','url(media/jo-tu-na-mila-thumbnail.jpg)')"></div>
-                        <div class="song" id="song2"
-                            onclick="playaudio('myaudio2','url(media/tum-hi-ho-thumbnail.jpg)')"></div>
-                    </div>
-
-                    <div class="songcard" id="songcard2">
-                        <div class="song" id="song3"
-                            onclick="playaudio('myaudio3','url(media/teri-ore-thumbnail.jpg)')"></div>
-                        <div class="song" id="song4"
-                            onclick="playaudio('myaudio4','url(media/panna-ki-tamanna-thumb.jpeg)')"></div>
-                    </div>
-                    <div class="songcard" id="songcard3">
-                        <div class="song" id="song5" onclick="playaudio('myaudio5')">Soon...</div>
-                        <div class="song" id="song6" onclick="playaudio('myaudio6')"></div>
-                    </div>
-                    <div class="songcard" id="songcard4">
-                        <div class="song" id="song7" onclick="playaudio('myaudio7')"></div>
-                        <div class="song" id="song8" onclick="playaudio('myaudio8')"></div>
-                    </div>
-                    <div class="songcard" id="songcard5">
-                        <div class="song" id="song9" onclick="playaudio('myaudio9')"></div>
-                        <div class="song" id="song10" onclick="playaudio('myaudio10')"></div>
-                    </div>
-                    <div class="songcard" id="songcard6">
-                        <div class="song" id="song11" onclick="playaudio('myaudio11')"></div>
-                        <div class="song" id="song12" onclick="playaudio('myaudio12')"></div>
-                    </div>
-                    <div class="songcard" id="songcard7">
-                        <div class="song" id="song13" onclick="playaudio('myaudio13')"></div>
-                        <div class="song" id="song14" onclick="playaudio('myaudio14')"></div>
-                    </div>
-                    <div class="songcard" id="songcard8">
-                        <div class="song" id="song15" onclick="playaudio('myaudio15')"></div>
-                        <div class="song" id="song16" onclick="playaudio('myaudio16')"></div>
-                    </div>
-                    <div class="songcard" id="songcard9">
-                        <div class="song" id="song17" onclick="playaudio('myaudio17')"></div>
-                        <div class="song" id="song18" onclick="playaudio('myaudio18')"></div>
-                    </div>
-                </div>
-                <audio id="myaudio1" class="myaudio" src="media/jo-tu-na-mila.mp3"></audio>
-
-                <audio id="myaudio2" class="myaudio" src="media/tum-hi-ho.mp3"></audio>
-
-                <audio id="myaudio3" class="myaudio" src="media/teri-ore.mp3"></audio>
-
-                <audio id="myaudio4" class="myaudio" src="media/panna-ki-tamanna.mp3"></audio>
-                <audio id="myaudio5" class="myaudio" src=""></audio>
-                <audio id="myaudio6" class="myaudio" src=""></audio>
-                <audio id="myaudio7" class="myaudio" src=""></audio>
-                <audio id="myaudio8" class="myaudio" src=""></audio>
-                <audio id="myaudio9" class="myaudio" src=""></audio>
-                <audio id="myaudio10" class="myaudio" src=""></audio>
-                <audio id="myaudio11" class="myaudio" src=""></audio>
-                <audio id="myaudio12" class="myaudio" src=""></audio>
-                <audio id="myaudio13" class="myaudio" src=""></audio>
-                <audio id="myaudio14" class="myaudio" src=""></audio>
-                <audio id="myaudio15" class="myaudio" src=""></audio>
-                <audio id="myaudio16" class="myaudio" src=""></audio>
-                <audio id="myaudio17" class="myaudio" src=""></audio>
-                <audio id="myaudio18" class="myaudio" src=""></audio>
-
-                <div class="divExtraBali" id="divExtraBali"></div>
-
-
-            </div>
-
-            <div class="contOfLyricsDiv" id="contOfLyricsDiv">
-                <div class="lyricsdivmain" id="lyricsdivmain1"></div>
-                <div class="flex">
-                    <div class="fullLyrics" id="fullLyrics">Full Lyrics</div>
-                    <div class="lyricsdivclose" id="lyricsdivclose">Close Lyrics</div>
-                </div>
-                <div class="lyricsdivmain flexcenter" id="lyricsdivmain2"></div>
-                <div class="divExtraBali2" id="divExtraBali2"></div>
-
-            </div>
-        </div>
-    </main>
-    <footer>
-
-
-
-        <div class="musicplay" id="musicplay">
-            <div class="song-thumb" id="song-thumb"></div>
-            <div class="flexcenter musicdiv">
-                <div class="aligncenter submusicdiv1">
-                    <button id="playPauseBtn">Play</button>
-                    <div class="lyrics flexcenter" id="lyrics">Lyrics</div>
-                    <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1">
-                    <div class="lyrics closeMusicPlay flexcenter" id="closeMusicPlay">Close</div>
-                </div>
-                <div class="submusicdiv2">
-                    <div class="timeout flexcenter" id="audiotime">0:00</div>
-                    <input type="range" id="seekBar" value="0" step="1" min="0">
-                    <div class="timeout flexcenter" id="songduration">0:00</div>
-                </div>
-            </div>
-        </div>
-        <div class="menuBar gridcenter" id="menuBar">
-            <div class="homeMenu c-menu flexcenter" id="homeMenu">Home</div>
-            <div class="exploreMenu c-menu flexcenter" id="exploreMenu">Explore</div>
-            <div class="likesMenu c-menu flexcenter" id="likesMenu">Likes</div>
-            <div class="preMenu c-menu flexcenter" id="preMenu">Premiume</div>
-        </div>
-
-        <div class="footer-main" id="footer-main">
-            <div class="explore-div" id="explore-div">
-                <div class="songcard" id="songcard6">
-                    <div class="song" id="main-home"><a href="index.html">Explore <br> Main Web</a></div>
-                    <div class="song" id="tic"><a href="tictactoe.html">Explore<br>Tic Tac App</a></div>
-                </div>
-                <div class="songcard" id="songcard6">
-                    <div class="song" id="calc">Explore<br>.......</div>
-                    <div class="song" id="NotAvailable">Soon...</div>
-                </div>
-            </div>
-
-            <div id="premium-div" class="premium-div">
-                <div class="payment">
-                    <h1 class="payment-h1">Premium Membership</h1>
-                    <div class="button-container">
-                        <button id="makePaymentBtn" class="premium-btn">Pay Now</button>
-                        <button class="premium-btn" Id="makePaymentBtn2">Offer 2</button>
-                        <button class="premium-btn">Why you should take premium</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-    <script src="style.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

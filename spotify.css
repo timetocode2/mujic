@@ -1,9 +1,15 @@
 
-.container {
+header{
   width: 100%;
   margin: 0;
-  display: none;
-    flex-direction: column;
+background-color: #000;
+position: fixed;
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
 }
 
 .profileAndName{
@@ -11,14 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    
     height: 57px;
-    position: fixed;
-    top: 1px;
     background: #000;
-    z-index: 1;
-
 }
 
 
@@ -31,7 +31,8 @@
     height: 45px;
     font-size: 33px;
     font-weight: 700;
-    margin: 0px 15px;
+    margin: 0px 15px 0px 5px;
+    text-align: center;
 }
 
 .userName {
@@ -47,7 +48,7 @@
     height: 43px;
     background-color: rgb(85, 84, 84);
     position: fixed;
-    right: 15px;
+    right: 5px;
 
 }
 
@@ -70,16 +71,15 @@
 }
 
 .search {
-    width: 95%;
+    width: 96%;
     height: 42px;
     background-color: white;
     color: rgba(19, 17, 17, 0.836);
-    position: fixed;
-    top: 60px;
     border-radius: 5px;
     font-size: 20px;
     padding: 1px 15px;
-    z-index: 1;
+    margin-top: 5px;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 4px 0px;
 }
 
 
@@ -93,19 +93,23 @@
 
 
 
-.cont-main {
-    
-    position: relative;
-    top: 120px;
+main {
+    width: 100%;
+    height: 100%    ;
     display: flex;
     align-items: center;
-    justify-content: center;
+
+}
+#allsongaccess{
+    width: 100%;
+    position: relative;
+    top: 115px;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    /* border-bottom: 1px white solid; */
 }
 
  .songcard {
-
     width: 95vmin;
     height: 25.875vmin;
     display: flex;

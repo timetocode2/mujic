@@ -1,35 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    box-sizing: border-box;
-    
-}
-
-
-body {
-    background-color: #000;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    width: 100vw;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.flexcenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-.spotyphy {
-    width: 100%;
-    color: white;
-    background: #000;
-    width: 100%;
-}
 
 
 #secondPage{

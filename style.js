@@ -1,45 +1,17 @@
-document.getElementById("log-in").addEventListener("click", () => {
-  alert("Function not available;");
+document.addEventListener("DOMContentLoaded", function () {
+  let userName = localStorage.getItem("userName");
+
+  document.getElementById("userName").innerText = "Hello " + userName;
+  document.getElementById("userName").style.color = "white";
 });
 
-const signUp = document.getElementById("sign-up");
-const firstPage = document.getElementById("firstPage");
-const secondPage = document.getElementById("secondPage");
+
+
 const footer = document.querySelector("footer");
-const container = document.querySelector(".container");
+const header = document.querySelector("header");
 
 
 const menuBar = document.getElementById("menuBar");
-
-signUp.addEventListener("click", () => {
-  firstPage.style.display = "none";
-  secondPage.style.setProperty("display", "flex")
-});
-
-
-function validateForm() {
-  // let myEmail = document.getElementById("input-email").value;
-  let name = document.getElementById("input-name").value;
-  // let number = document.getElementById("input-number").value;
-
-  // if (name.trim() === "") {
-  //     alert("Please enter your name.");
-  //     return;
-  // }
-
-  // if (number.length !== 10 || isNaN(number)) {
-  //     alert("Please enter a valid 10-digit phone number.");
-  //     return;
-  //  }
-
-  secondPage.style.display = "none";
-  container.style.setProperty('display', "flex");
-  document.getElementById('userName').innerText = "Hello " + name;
-  footer.style.setProperty('display', 'inherit');
-};
-
-
-
 
 
 const homeMenu = document.getElementById('homeMenu');
@@ -53,19 +25,17 @@ const premiumDiv = document.getElementById('premium-div');
 
 
 function HomeCloser() {
-  profileAndName.style.setProperty('display', 'none', 'important');
-  contMain.style.setProperty('display', 'none', 'important');
-  search.style.setProperty('display', 'none', 'important');
+  header.style.setProperty('display', 'none', 'important');
   divExtraBali.style.setProperty('border', 'none');
-  container.style.setProperty('display', 'none', 'important');
+  allsongaccess.style.setProperty('display', 'none');
 };
 
+
 function HomeLoader() {
-  profileAndName.style.setProperty('display', 'flex');
-  contMain.style.setProperty('display', 'flex');
-  search.style.setProperty('display', 'flex');
+  header.style.setProperty('display', 'flex');
   divExtraBali.style.setProperty('border', '');
-  container.style.setProperty('display', 'flex');
+  allsongaccess.style.setProperty('display', 'inherit');
+
 }
 
 function ExploreLoader() {
@@ -79,7 +49,7 @@ function ExploreCloser() {
   }
 };
 function PreLoader() {
-    footerMain.style.display = 'flex';
+  footerMain.style.display = 'flex';
   premiumDiv.style.display = 'flex';
 };
 
@@ -134,8 +104,9 @@ preMenu.addEventListener('click', () => {
   if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
     closeLyrics();
   };
-  if(window.getComputedStyle(container).display === "flex"){
-  HomeCloser();};
+  if (window.getComputedStyle(container).display === "flex") {
+    HomeCloser();
+  };
 
   if (exploreDiv.style.display = 'flex') {
     ExploreCloser();
@@ -155,7 +126,7 @@ preMenu.addEventListener('click', () => {
 const profileAndName = document.getElementById('profileAndName');
 const contMain = document.getElementById('cont-main');
 const search = document.getElementById('search');
-const contMenu = document.getElementById('cont-menu');
+const allsongaccess = document.getElementById('allsongaccess');
 
 
 const playPauseBtn = document.getElementById('playPauseBtn');
@@ -216,7 +187,8 @@ function playaudio(audioId, thumbnail) {
 
   if (myaudio.paused) {
     myaudio.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.style.setProperty('background', "url('media/pause.jpg')");
+    playPauseBtn.style.setProperty('background-size', "cover");
     musicplay.style.setProperty('display', "flex");
 
   } else {
@@ -251,16 +223,46 @@ function playaudio(audioId, thumbnail) {
     seconds2 = seconds2 < 10 ? "0" + seconds2 : seconds2;
     songduration.innerHTML = `${minutes2}:${seconds2}`;
 
+
+    for (let i = 0; i < lyricsdata.length; i++) {
+
+      const meraSpan = document.querySelector(`.c${i + 101}`);
+
+      if (myaudio.currentTime >= lyricsdata[i].time) {
+        setTimeout(() => {
+          if (meraSpan) {
+            meraSpan.style.color = "yellow";
+          };
+        });
+      }else{
+        if (meraSpan) {
+          meraSpan.style.color = "white";
+        };
+      };
+
+      meraSpan.addEventListener('click',()=>{
+        anyaudio.currentTime = lyricsdata[i].time;
+      })
+    };
+
   });
+
+
+
+
+  
 };
+
 
 playPauseBtn.addEventListener('click', () => {
   if (anyaudio.paused) {
     anyaudio.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.style.setProperty('background', "url('media/pause.jpg')");
+    playPauseBtn.style.setProperty('background-size', "cover");
   } else {
     anyaudio.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.style.setProperty('background', "url('media/play.jpg')");
+    playPauseBtn.style.setProperty('background-size', "cover");
   }
 });
 
@@ -272,8 +274,65 @@ volumeBar.addEventListener('input', () => {
   anyaudio.volume = volumeBar.value;
 });
 
+
+const lyricsdata = [
+  { time: 24, Text: "<span class='c101'>Kal the yahi</span>" },
+  { time: 27, Text: "<span class='c102'>Kyu ab nahi</span>" },
+  { time: 30, Text: "<span class='c103'>Tum aur mai saath dono</span><br>" },
+  { time: 36, Text: "<span class='c104'>Kya mil gyi tumko khusi</span>" },
+  { time: 42, Text: "<span class='c105'>Hoke juda yeh toh bolo</span><br>" },
+  { time: 47, Text: "<span class='c106'>Pyar tha waqt nahi</span>" },
+  { time: 49, Text: "<span class='c107'>jo beet gya do pal me</span>" },
+  { time: 53, Text: "<span class='c108'>tu banke yaad rahe</span>" },
+  { time: 55, Text: "<span class='c109'>fariyad rahega dil me</span><br>" },
+  { time: 59, Text: "<span class='c110'>Kyu ab ek lafz nhi,</span>" },
+  { time: 61, Text: "<span class='c111'>dil kahne ki haalat me</span>" },
+  {time:66, Text:"<span class='c112'>Socha , kahunga ek din</span><br>"},
+  {time:72, Text:"<span class='c113'>jo tu na mila mujhe</span>"},
+  {time:75, Text:"<span class='c114'>jo tu na mila mujhe</span>"},
+  {time:78, Text:"<span class='c115'>Dil ko Kya bataunga</span>"},
+  {time:81, Text:"<span class='c116'>Dil ko Kya bataunga</span>"},
+  {time:84, Text:"<span class='c117'>jo tu na mila mujhe</span>"},
+  {time:87, Text:"<span class='c118'>jo tu na mila mujhe</span>"},
+  {time:90, Text:"<span class='c119'>Dil ko Kya bataunga</span>"},
+  {time:93, Text:"<span class='c120'>Dil ko Kya bataunga</span><br><br>"},
+  {time:105, Text:"<span class='c121'>jo tu na mila mujhe</span><br><br>"},
+  {time:120, Text:"<span class='c122'>Kah de tu aayega nhi</span>"},
+  {time:123, Text:"<span class='c123'>mujhse mil payega nhi</span>"},
+  {time:126, Text:"<span class='c124'>Dekhun kyu rahe mai teri</span><br>"},
+  {time:132, Text:"<span class='c125'>Dil se tu jayega nhi</span>"},
+  {time:135, Text:"<span class='c126'>Tu dard samjhega ye nhi</span>"},
+  {time:139, Text:"<span class='c127'>Mushkil hai aage Zindgi</span><br>"},
+  {time:144, Text:"<span class='c128'>Mann tha bada, tu hota mera</span>"},
+  {time:150, Text:"<span class='c129'>Tu na mila, ghum hai tera</span><br>"},
+  {time:155, Text:"<span class='c130'>Kyun dia dard hume</span>"},
+  {time:157, Text:"<span class='c131'>hum aaj talak na samjhe</span>"},
+  {time:161, Text:"<span class='c132'>Bure hai kya itne</span>"},
+  {time:162, Text:"<span class='c133'>Tum aa na sake jo milne</span>"},
+  {time:167, Text:"<span class='c134'>Tu humko bhool gya</span>"},
+  {time:169, Text:"<span class='c135'>Bus yrr hum hi pagal the</span>"},
+  {time:174, Text:"<span class='c136'>Sochha Tumhe Jo Raat Din</span><br>"},
+  {time:180, Text:"<span class='c137'>jo tu na mila mujhe</span>"},
+  {time:183, Text:"<span class='c138'>jo tu na mila mujhe</span>"},
+  {time:186, Text:"<span class='c139'>Dil ko Kya bataunga</span>"},
+  {time:189, Text:"<span class='c140'>Dil ko Kya bataunga</span></span>"},
+  {time:192, Text:"<span class='c141'>jo tu na mila mujhe</span></span>"},
+  {time:195, Text:"<span class='c142'>jo tu na mila mujhe</span>"},
+  {time:198, Text:"<span class='c143'>Dil ko Kya bataunga</span>"},
+  {time:201, Text:"<span class='c144'>Dil ko Kya bataunga</span><br><br>"},
+  {time:207, Text:"<span class='c145'>jo tu jo tu na mila mujhe</span><br><br>"},
+  {time:213, Text:"<span class='c146'>Dil ko Kya bataunga</span>"},
+  {time:218, Text:"<span class='c147'>Hmmm mmm mm....</span>"},
+  {time:225, Text:"<span class='c148'>Dil ko Kya bataunga</span>"},
+
+];
+
 song1.addEventListener("click", () => {
-  lyricsdivmain1.innerHTML = "<span style='color: white;'>Kal the yahi <br> Kyu ab nahi  <br>  Tum aur mai saath dono <br> Kya mil gyi tumko khusi <br> Hoke juda yeh toh bolo <br> Pyar tha waqt nahi <br> jo beet gya do pal me <br> tu banke yaad rahe  <br> fariyad rahega dil me <br>  Socha , kahunga ek din <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga <br> jo tu na mila mujhe<br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga  <br> <br>Kah de tu aayega nhi  <br> mujhse mil payega nhi <br> Dekhun kyu rahe mai teri <br> Dil se tu jayega nhi <br> Tu dard samjhega ye nhi <br> Mushkil hai aage Zindgi <br>  <br> Mann tha bada, tu hota mera <br> Tu na mila, ghum hai tera <br>  <br> Kyun dia dard hume <br> hum aaj talak na samjhe <br> Bure hai kya itne  <br> Tum aa na sake jo milne <br> Tu humko bhool gya  <br> Bus yrr hum hi pagal the <br> Sochha Tumhe Jo Raat Din <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga  <br> jo tu jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga</span>";
+  lyricsdivmain1.innerHTML=" "
+  for (let i = 0; i < lyricsdata.length; i++) {
+    lyricsdivmain1.innerHTML += lyricsdata[i].Text;
+  };
+  // lyricsdivmain1.innerHTML = "<span style='color: white;'>Kal the yahi <br> Kyu ab nahi  <br>  Tum aur mai saath dono <br> Kya mil gyi tumko khusi <br> Hoke juda yeh toh bolo <br> Pyar tha waqt nahi <br> jo beet gya do pal me <br> tu banke yaad rahe  <br> fariyad rahega dil me <br>  Socha , kahunga ek din <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga <br> jo tu na mila mujhe<br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga  <br> <br>Kah de tu aayega nhi  <br> mujhse mil payega nhi <br> Dekhun kyu rahe mai teri <br> Dil se tu jayega nhi <br> Tu dard samjhega ye nhi <br> Mushkil hai aage Zindgi <br>  <br> Mann tha bada, tu hota mera <br> Tu na mila, ghum hai tera <br>  <br> Kyun dia dard hume <br> hum aaj talak na samjhe <br> Bure hai kya itne  <br> Tum aa na sake jo milne <br> Tu humko bhool gya  <br> Bus yrr hum hi pagal the <br> Sochha Tumhe Jo Raat Din <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga <br> jo tu na mila mujhe <br> jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga  <br> jo tu jo tu na mila mujhe <br> Dil ko Kya bataunga <br> Dil ko Kya bataunga</span>";
   lyricsdivmain2.innerHTML = `Listen Jo tu na mila on yt<iframe width="340" height="192" src="https://www.youtube.com/embed/wPqpmsYISBc?si=_OswlQxXZSM1534X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 });
 
@@ -297,16 +356,13 @@ song4.addEventListener("click", () => {
 
 lyrics.addEventListener('click', () => {
 
-  if (window.getComputedStyle(lyricsdivmain1).display === "none") {
+  if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
     HomeCloser();
     contOfLyricsDiv.style.setProperty('display', 'flex');
-    lyricsdivmain1.style.setProperty('display', 'flex');
-    lyricsdivmain2.style.setProperty('display', 'flex');
-    fullLyrics.style.setProperty('display', 'flex');
-    lyricsdivclose.style.setProperty('display', 'flex');
     divExtraBali2.style.display = "inherit";
 
   } else {
+    HomeLoader();
     closeLyrics();
   };
 
@@ -319,12 +375,7 @@ lyrics.addEventListener('click', () => {
 
 //  time to close lyrics section
 function closeLyrics() {
-  HomeLoader();
   contOfLyricsDiv.style.setProperty('display', 'none');
-  lyricsdivmain1.style.setProperty('display', "none");
-  lyricsdivmain2.style.setProperty('display', "none");
-  fullLyrics.style.setProperty('display', "none");
-  lyricsdivclose.style.setProperty('display', "none");
   divExtraBali2.style.display = "";
 
   if (fullLyrics.textContent === "Short Lyrics") {
@@ -340,17 +391,18 @@ function closeLyrics() {
 
 closeMusicPlay.addEventListener('click', () => {
 
-  if (lyricsdivmain1.style.display === "flex") {
+  if (contOfLyricsDiv.style.display === "flex") {
     closeLyrics();
+    HomeLoader();
   } else {
     musicplay.style.setProperty('display', "none");
     anyaudio.pause();
-    playPauseBtn.textContent = 'Play';
   };
 });
 
 lyricsdivclose.addEventListener('click', () => {
   closeLyrics();
+  HomeLoader();
 });
 
 fullLyrics.addEventListener('click', () => {
