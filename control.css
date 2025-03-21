@@ -97,11 +97,15 @@ footer {
 }
 
 #playPauseBtn {
-    border-radius: 8px;
+    border-radius: 100px;
     width: 50px;
     height: 50px;
     border: none;
 
+}
+i{
+/* transform: scale(2.2); */
+/* transform-origin: center; */
 }
 
 .timeout {

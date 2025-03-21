@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="spotify.css">
     <link rel="stylesheet" href="control.css">
@@ -29,9 +31,9 @@
     <main>
         <div id="allsongaccess">
             <div class="songcard" id="songcard1">
-                <div class="song" id="song1" onclick="playaudio('myaudio1','url(media/jo-tu-na-mila-thumbnail.jpg)', '1')">
+                <div class="song" id="song1" onclick="playaudio('myaudio1','url(media/jo-tu-na-mila-thumbnail.jpg)', 1)">
                 </div>
-                <div class="song" id="song2" onclick="playaudio('myaudio2','url(media/tum-hi-ho-thumbnail.jpg)', '2')"></div>
+                <div class="song" id="song2" onclick="playaudio('myaudio2','url(media/tum-hi-ho-thumbnail.jpg)', 2)"></div>
             </div>
 
             <div class="songcard" id="songcard2">
@@ -122,7 +124,7 @@
                 </div>
 
             </div>
-            <button id="playPauseBtn"></button>
+            <div id="playPauseBtn"> <i class="fa fa-play"></i> </div>
         </div>
         <div class="menuBar gridcenter" id="menuBar">
             <div class="homeMenu c-menu flexcenter" id="homeMenu">Home</div>
@@ -134,8 +136,8 @@
         <div class="footer-main" id="footer-main">
             <div class="explore-div" id="explore-div">
                 <div class="songcard" id="songcard6">
-                    <div class="song" id="main-home"><a href="index.html">Explore <br> Main Web</a></div>
-                    <div class="song" id="tic"><a href="tictactoe.html">Explore<br>Tic Tac App</a></div>
+                    <div class="song" id="main-home"><a href="https://timetocode2.github.io/himanshu-singh/index.html">Explore <br> Main Web</a></div>
+                    <div class="song" id="tic"><a href="https://timetocode2.github.io/himanshu-singh/tictactoe.html">Explore<br>Tic Tac App</a></div>
                 </div>
                 <div class="songcard" id="songcard6">
                     <div class="song" id="calc">Explore<br>.......</div>

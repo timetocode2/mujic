@@ -104,7 +104,7 @@ preMenu.addEventListener('click', () => {
   if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
     closeLyrics();
   };
-  if (window.getComputedStyle(container).display === "flex") {
+  if (window.getComputedStyle(header).display === "flex") {
     HomeCloser();
   };
 
@@ -178,7 +178,14 @@ let anyaudio = "";
 
 function playaudio(audioId, thumbnail, lyricsnum) {
 
-  const myaudio = document.getElementById(audioId);
+const myaudio = document.getElementById(audioId);
+song = lyricsnum;
+anyaudio = myaudio;
+songThumb.style.setProperty("background", thumbnail);
+songThumb.style.setProperty("background-size", "cover");
+
+
+
   const close111 = document.querySelectorAll("audio");
   close111.forEach(close1 => {
     close1.pause();
@@ -187,8 +194,7 @@ function playaudio(audioId, thumbnail, lyricsnum) {
 
   if (myaudio.paused) {
     myaudio.play();
-    playPauseBtn.style.setProperty('background', "url('media/pause.jpg')");
-    playPauseBtn.style.setProperty('background-size', "cover");
+     playPauseBtn.innerHtml = "<i class='fa fa-pause'>";
     musicplay.style.setProperty('display', "flex");
 
   } else {
@@ -196,11 +202,9 @@ function playaudio(audioId, thumbnail, lyricsnum) {
     musicplay.style.setProperty('display', "none");
 
   };
-  anyaudio = myaudio;
+
   seekBar.value = "0";
   myaudio.currentTime = seekBar.value;
-  songThumb.style.setProperty("background", thumbnail);
-  songThumb.style.setProperty("background-size", "cover");
 
 
 
@@ -223,7 +227,7 @@ function playaudio(audioId, thumbnail, lyricsnum) {
     seconds2 = seconds2 < 10 ? "0" + seconds2 : seconds2;
     songduration.innerHTML = `${minutes2}:${seconds2}`;
 
-if(song === 1){
+if(song == 1){
     for (let i = 0; i < lyricsdata1.length; i++) {
       const meraSpan = document.querySelector(`.c${i + 101}`);
       if (myaudio.currentTime >= lyricsdata1[i].time) {
@@ -240,22 +244,22 @@ if(song === 1){
       meraSpan.addEventListener('click', () => {
         anyaudio.currentTime = lyricsdata1[i].time;
       });
-    };}else if(song ===2 ){
-      for (let j = 0; j < lyricsdata2.length; j++) {
-        const meraSpan = document.querySelector(`.c${j + 101}`);
-        if (myaudio.currentTime >= lyricsdata2[j].time) {
+    };}else if(song == 2 ){
+      for (let i = 0; i < lyricsdata2.length; i++) {
+        const meraSpan2 = document.querySelector(`.d${i + 101}`);
+        if (myaudio.currentTime >= lyricsdata2[i].time) {
           setTimeout(() => {
-            if (meraSpan) {
-              meraSpan.style.color = "yellow";
+            if (meraSpan2) {
+              meraSpan2.style.color = "pink";
             };
           });
         } else {
-          if (meraSpan) {
-            meraSpan.style.color = "white";
+          if (meraSpan2) {
+            meraSpan2.style.color = "green";
           };
         };
-        meraSpan.addEventListener('click', () => {
-          anyaudio.currentTime = lyricsdata2[j].time;
+        meraSpan2.addEventListener('click', () => {
+          anyaudio.currentTime = lyricsdata2[i].time;
         });
   
     };};
@@ -268,12 +272,10 @@ if(song === 1){
 playPauseBtn.addEventListener('click', () => {
   if (anyaudio.paused) {
     anyaudio.play();
-    playPauseBtn.style.setProperty('background', "url('media/pause.jpg')");
-    playPauseBtn.style.setProperty('background-size', "cover");
+    playPauseBtn.innerHtml = "<i class='fa fa-pause'>";
   } else {
     anyaudio.pause();
-    playPauseBtn.style.setProperty('background', "url('media/play.jpg')");
-    playPauseBtn.style.setProperty('background-size', "cover");
+    playPauseBtn.innerHtml = "<i class='fa fa-play'>";
   }
 });
 
@@ -337,23 +339,20 @@ const lyricsdata1 = [
   { time: 225, Text: "<span class='c148'>Dil ko Kya bataunga</span>" },
 ];
 const lyricsdata2 = [
-  { time: 0, Text: "<br><h1 class='headingInLyrics'>Tum Hi Ho Lyrics</h1>" },
-  { time: 0, Text: "<br><br><span class='headingInLyrics'>[Verse 1]</span><br>" },
-
-  { time: 10, Text: "<span class='c101'>Hum tere bin ab reh nahi sakte</span>" },
-  { time: 15.7, Text: "<span class='c102'>Tere bina kya wajood mera?</span> <br>" },
-  { time: 26, Text: "<span class='c103'>Hum tere bin ab reh nahi sakte</span><br>" },
-  { time: 30.8, Text: "<span class='c104'>Tere bina kya wajood mera?</span><br>" },
-  { time: 35.6, Text: "<span class='c105'>Tujhse juda gar ho jayenge</span><br>" },
-  { time: 40.7, Text: "<span class='c106'>To khudse hi ho jayenge juda<br></span>" },
+  { time: 10, Text: "<br><h1 class='headingInLyrics'>Tum Hi Ho Lyrics</h1><br><br><span class='headingInLyrics'>[Verse 1]</span><br><span class='d101'>Hum tere bin ab reh nahi sakte</span>" },
+  { time: 15.7, Text: "<span class='d102'>Tere bina kya wajood mera?</span> <br>" },
+  { time: 26, Text: "<span class='d103'>Hum tere bin ab reh nahi sakte</span><br>" },
+  { time: 30.8, Text: "<span class='d104'>Tere bina kya wajood mera?</span><br>" },
+  { time: 35.6, Text: "<span class='d105'>Tujhse juda gar ho jayenge</span><br>" },
+  { time: 40.7, Text: "<span class='d106'>To khudse hi ho jayenge juda<br></span>" },
 
   { time: 45, Text: "<br><span class='headingInLyrics'>[Chorus]</span><br>" },
-  { time: 47, Text: "<span class='c107'>Kyunki tum hi ho,</span>" },
-  { time: 51, Text: "<span class='c108'>ab tum hi ho<br></span>" },
-  { time: 53, Text: "<span class='c109'>Zindagi, ab tum hi ho<br></span>" },
-  { time: 58, Text: "<span class='c110'>Chain bhi, mera dard bhi<br></span>" },
-  { time: 64, Text: "<span class='c111'>Meri aashiqui, ab tum hi ho<br></span>" },
-  { time: 66, Text: "<span class='c112'></span>" },
+  { time: 47, Text: "<span class='d107'>Kyunki tum hi ho,</span>" },
+  { time: 51, Text: "<span class='d108'>ab tum hi ho<br></span>" },
+  { time: 53, Text: "<span class='d109'>Zindagi, ab tum hi ho<br></span>" },
+  { time: 58, Text: "<span class='d110'>Chain bhi, mera dard bhi<br></span>" },
+  { time: 64, Text: "<span class='d111'>Meri aashiqui, ab tum hi ho<br></span>" },
+  { time: 66, Text: "<span class='d112'></span>" },
 
   //  <br><span class='headingInLyrics'>[Verse 2]</span><br>Tera mera rishta hai kaisa<br>Ek pal dur gawara nahi<br>Tere liye har roz hai jeete<br>Tujhko diya mera waqt sabhi<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Koi lamha mera na ho tere bina<br>Har saans pe naam tera<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
 
