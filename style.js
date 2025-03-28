@@ -346,40 +346,44 @@ const lyricsdata2 = [
   { time: 35.6, Text: "<span class='d105'>Tujhse juda gar ho jayenge</span><br>" },
   { time: 40.7, Text: "<span class='d106'>To khudse hi ho jayenge juda<br></span>" },
 
-  { time: 45, Text: "<br><span class='headingInLyrics'>[Chorus]</span><br>" },
-  { time: 47, Text: "<span class='d107'>Kyunki tum hi ho,</span>" },
+  { time: 47, Text: "<br><span class='headingInLyrics'>[Chorus]</span><br>   <span class='d107'>Kyunki tum hi ho,</span>" },
   { time: 51, Text: "<span class='d108'>ab tum hi ho<br></span>" },
   { time: 53, Text: "<span class='d109'>Zindagi, ab tum hi ho<br></span>" },
   { time: 58, Text: "<span class='d110'>Chain bhi, mera dard bhi<br></span>" },
   { time: 64, Text: "<span class='d111'>Meri aashiqui, ab tum hi ho<br></span>" },
-  { time: 66, Text: "<span class='d112'></span>" },
 
-  //  <br><span class='headingInLyrics'>[Verse 2]</span><br>Tera mera rishta hai kaisa<br>Ek pal dur gawara nahi<br>Tere liye har roz hai jeete<br>Tujhko diya mera waqt sabhi<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Koi lamha mera na ho tere bina<br>Har saans pe naam tera<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
 
-  { time: 72, Text: "<span class='c113'>jo tu na mila mujhe</span>" },
-  { time: 75, Text: "<span class='c114'>jo tu na mila mujhe</span>" },
-  { time: 78, Text: "<span class='c115'>Dil ko Kya bataunga</span>" },
-  { time: 81, Text: "<span class='c116'>Dil ko Kya bataunga</span>" },
-  { time: 84, Text: "<span class='c117'>jo tu na mila mujhe</span>" },
-  { time: 87, Text: "<span class='c118'>jo tu na mila mujhe</span>" },
-  { time: 90, Text: "<span class='c119'>Dil ko Kya bataunga</span>" },
-  { time: 93, Text: "<span class='c120'>Dil ko Kya bataunga</span><br><br>" },
-  { time: 105, Text: "<span class='c121'>jo tu na mila mujhe</span><br><br>" },
-  { time: 120, Text: "<span class='c122'>Kah de tu aayega nhi</span>" },
-  { time: 123, Text: "<span class='c123'>mujhse mil payega nhi</span>" },
-  { time: 126, Text: "<span class='c124'>Dekhun kyu rahe mai teri</span><br>" },
-  { time: 132, Text: "<span class='c125'>Dil se tu jayega nhi</span>" },
-  { time: 135, Text: "<span class='c126'>Tu dard samjhega ye nhi</span>" },
-  { time: 139, Text: "<span class='c127'>Mushkil hai aage Zindgi</span><br>" },
-  { time: 144, Text: "<span class='c128'>Mann tha bada, tu hota mera</span>" },
-  { time: 150, Text: "<span class='c129'>Tu na mila, ghum hai tera</span><br>" },
-  { time: 155, Text: "<span class='c130'>Kyun dia dard hume</span>" },
-  { time: 157, Text: "<span class='c131'>hum aaj talak na samjhe</span>" },
-  { time: 161, Text: "<span class='c132'>Bure hai kya itne</span>" },
-  { time: 162, Text: "<span class='c133'>Tum aa na sake jo milne</span>" },
-  { time: 167, Text: "<span class='c134'>Tu humko bhool gya</span>" },
-  { time: 169, Text: "<span class='c135'>Bus yrr hum hi pagal the</span>" },
-  { time: 174, Text: "<span class='c136'>Sochha Tumhe Jo Raat Din</span><br>" },
+  { time: 89, Text: "<br><span class='headingInLyrics'>[Verse 2]</span><span class='d112'><br>Tera mera rishta hai kaisa<br></span>" },
+  { time: 94, Text: "<span class='d113'>Ek pal dur gawara nahi</span><br>" },
+  { time: 99, Text: "<span class='d114'>Tere liye har roz hai jeete<br></span>" },
+  { time: 104, Text: "<span class='d115'>Tujhko diya mera waqt sabhi<br></span>" },
+  { time: 109, Text: "<br><span class='headingInLyrics'>[Pre-Chorus]</span><span class='d116'><br>Koi lamha mera na ho tere bina<br></span>" },
+  { time: 114, Text: "<span class='d117'>Har saans pe naam tera<br></span>" },
+
+  { time: 122, Text: "<br><span class='headingInLyrics'>[Chorus]</span><span class='d118'><br>Kyunki tum hi ho<br></span>" },
+  { time: 125, Text: "<span class='d119'>ab tum hi ho<br></span>" },
+  { time: 128, Text: "<span class='d120'>Zindagi, ab tum hi ho<br></span>" },
+  { time: 133, Text: "<span class='d121'> Chain bhi, mera dard bhi<br></span>" },
+  { time: 137.5, Text: "<span class='d122'>Meri aashiqui, ab tum hi ho<br></span>" },
+
+
+  //    <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
+
+
+  { time: 123, Text: "<span class='c123'></span>" },
+  { time: 126, Text: "<span class='c124'></span>" },
+  { time: 132, Text: "<span class='c125'></span>" },
+  { time: 135, Text: "<span class='c126'></span>" },
+  { time: 139, Text: "<span class='c127'></span>" },
+  { time: 144, Text: "<span class='c128'></span>" },
+  { time: 150, Text: "<span class='c129'></span>" },
+  { time: 155, Text: "<span class='c130'></span>" },
+  { time: 157, Text: "<span class='c131'></span>" },
+  { time: 161, Text: "<span class='c132'></span>" },
+  { time: 162, Text: "<span class='c133'></span>" },
+  { time: 167, Text: "<span class='c134'></span>" },
+  { time: 169, Text: "<span class='c135'></span>" },
+  { time: 174, Text: "<span class='c136'></span><br>" },
   { time: 180, Text: "<span class='c137'>jo tu na mila mujhe</span>" },
   { time: 183, Text: "<span class='c138'>jo tu na mila mujhe</span>" },
   { time: 186, Text: "<span class='c139'>Dil ko Kya bataunga</span>" },
@@ -416,10 +420,14 @@ song2.addEventListener("click", () => {
 
 song3.addEventListener("click", () => {
   lyricsdivmain1.innerHTML = " ";
+  lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
 });
 
 song4.addEventListener("click", () => {
   lyricsdivmain1.innerHTML = "<span style='color: white;'>panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>haye o ta ra ra ru<br>haye o ta ra ra ru<br>panna ki tamanna hal ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br>hira toh pehle hi kisi aur kaa ho chuka<br>hira toh pehle hi kisi aur kaa ho chuka<br>kissi ki, madbhari aankho me kho chuka<br>yado ki bas dhul ban chuka dil kaa phul<br>sine pe mai rakh du jo hath<br>phir khil jaye chahe meri jaan jaye chahe meraa dil jaye <br> ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br> dil toh dete hai lete hai log kayi baar <br> dil toh dete hai lete hai log kayi baar <br>huwa kya, kisi se, kiya tha tumne pyar<br>yado ko chhod de, wado ko tod de<br>apni  jagah se kaise parbat hil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br> bhula naa mere dil ko kabhi jis kaa khayal<br>bhula naa mere dil ko kabhi jis kaa khayal<br>ho sake, toh use, mere dil se tu nikal<br>naa karu mai yeh kam toh nahi meraa naam<br>naa karu mai yeh kam toh nahi meraa naam<br>baton se yeh jakhme-jigar kaise sil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho le lo, ta ra ra ru, ho le lo, ta ra ra ru</span>";
+  lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
 });
 
 
