@@ -6,7 +6,7 @@
     margin: 10px auto 15px auto;
     background: linear-gradient(to right, rgba(49, 235, 49, 0.185) 0%, #1a1a1a 40%, #1a1a1a 60%, #8f56eb65 100%);
     width: 85%;
-    height: 38vh;
+    height: calc(90vh - 160px - 52vmin);
     color: white;
     overflow: scroll;
     border-radius: 8px;
@@ -32,9 +32,9 @@
     padding-top: 10px;
     font-size: 20px;
     text-shadow: rgb(14, 170, 14) 1px 1px 1px;
-    color: #db1010;
+    color: #db1010d8;
     margin: 10px 7vw;
-    border: #db1010 2px solid;
+    border: #db3910b0 2px solid;
     width: 86vw;
     height: 52vw;
     background-repeat: no-repeat;

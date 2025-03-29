@@ -4,13 +4,13 @@ footer {
 
 
 .menuBar {
-    background: rgba(58, 29, 224, 0.096);
+    background: rgba(10, 5, 39, 0.185);
     border-radius: 8px;
 
     position: fixed;
-    bottom: 3px;
+    bottom: 2px;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
 
     height: 70px;
     width: 100vw;
@@ -29,7 +29,7 @@ footer {
     top: 1px;
     border-radius: 20px;
     border: 0.0001px white solid;
-    box-shadow: rgb(71, 153, 5) 3px 4px 5px;
+    /* box-shadow: rgb(71, 153, 5) 3px 4px 5px; */
 }
 
 
@@ -47,11 +47,11 @@ footer {
     position: fixed;
     bottom: 75px;
     border: 0.00001px #ffffff63 solid;
+    backdrop-filter: blur(10px);
     height: 70px;
     width: 100%;
     border-radius: 8px;
     align-items: center;
-    backdrop-filter: blur(10px);
 
     display: none;
 
@@ -63,7 +63,7 @@ footer {
 
     border-radius: 8px;
     width: 20vw;
-    height: 54px;
+    height: 11.25vw;
     margin: 0 10px;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,18 +73,31 @@ footer {
 }
 
 .musicdiv {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
 
     /* this is for main music control jisme thumbnail include nhi hai iske alava isme play,pause,volume,lyrics hai.. */
 }
 
-.submusicdiv1 {
+.musicdiv {
     margin-bottom: 3px;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
 }
 .submusicdiv2 {
     margin-bottom: 3px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 0.00001px #ffffff63 solid;
+    backdrop-filter: blur(10px);
+border-radius: 8px;
+    position: fixed;
+    bottom: 14px;
+
 }
 
 #volumeBar {
@@ -92,20 +105,35 @@ footer {
 }
 
 #seekBar {
-    width: 39vw;
-
+width: 74%;
 }
 
-#playPauseBtn {
+.makeAcircle{
     border-radius: 100px;
     width: 50px;
     height: 50px;
-    border: blue 2px solid;
+    border: rgba(255, 255, 255, 0.377) 0.1px solid;
     background: linear-gradient(to right, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
     display: flex;
     justify-content: center;
+z-index: inherit;
 }
-#playPauseBtn:active {
+
+
+ #playPauseBtn {
+    border-radius: 100px;
+    margin: 0px 5px;
+    width: 50px;
+    height: 50px;
+    border: blue 3px solid;
+    background: linear-gradient(to right, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    display: flex;
+    justify-content: center;
+z-index: inherit;
+
+}  
+
+ #playPauseBtn:active {
     transform: scale(0.95);
     background-color: rgba(211, 214, 211, 0.363);
 }
@@ -148,7 +176,7 @@ border-width: 11px 3px;
     border: solid white;
 border-width: 11px 3px;
 
-}
+} 
 
 
 .timeout {
@@ -164,22 +192,12 @@ border-width: 11px 3px;
     margin-left: 5px;
 }
 
-.lyrics {
-    width: 14vw;
-    height: 24px;
-    background-color: rgba(42, 207, 42, 0.945);
-color: black;
-    margin: 0 8px 2px 8px;
-    border-radius: 8px;
-box-shadow: rgba(255, 255, 255, 0.568) 2px 1px 10px;}
-
-.lyrics:active {
-    transform: scale(0.95);
-    background-color: rgba(211, 214, 211, 0.363);
-
+.likeSong{
+    background: url(media/no-like.jpg);
+    background-position: center;
+    background-size:70% ;
+    background-repeat: no-repeat;
 }
-
-
 
 
 

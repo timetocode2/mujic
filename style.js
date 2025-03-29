@@ -1,3 +1,123 @@
+const lyricsdata1 = [
+  { time: 24, Text: "<br><span class='c101'>Kal the yahi</span>" },
+  { time: 27, Text: "<span class='c102'>Kyu ab nahi</span>" },
+  { time: 30, Text: "<span class='c103'>Tum aur mai saath dono</span><br>" },
+  { time: 36, Text: "<span class='c104'>Kya mil gyi tumko khusi</span>" },
+  { time: 42, Text: "<span class='c105'>Hoke juda yeh toh bolo</span><br>" },
+  { time: 47, Text: "<span class='c106'>Pyar tha waqt nahi</span>" },
+  { time: 49, Text: "<span class='c107'>jo beet gya do pal me</span>" },
+  { time: 53, Text: "<span class='c108'>tu banke yaad rahe</span>" },
+  { time: 55, Text: "<span class='c109'>fariyad rahega dil me</span><br>" },
+  { time: 59, Text: "<span class='c110'>Kyu ab ek lafz nhi,</span>" },
+  { time: 61, Text: "<span class='c111'>dil kahne ki haalat me</span>" },
+  { time: 66, Text: "<span class='c112'>Socha , kahunga ek din</span><br>" },
+  { time: 72, Text: "<span class='c113'>jo tu na mila mujhe</span>" },
+  { time: 75, Text: "<span class='c114'>jo tu na mila mujhe</span>" },
+  { time: 78, Text: "<span class='c115'>Dil ko Kya bataunga</span>" },
+  { time: 81, Text: "<span class='c116'>Dil ko Kya bataunga</span>" },
+  { time: 84, Text: "<span class='c117'>jo tu na mila mujhe</span>" },
+  { time: 87, Text: "<span class='c118'>jo tu na mila mujhe</span>" },
+  { time: 90, Text: "<span class='c119'>Dil ko Kya bataunga</span>" },
+  { time: 93, Text: "<span class='c120'>Dil ko Kya bataunga</span><br><br>" },
+  { time: 105, Text: "<span class='c121'>jo tu na mila mujhe</span><br><br>" },
+  { time: 120, Text: "<span class='c122'>Kah de tu aayega nhi</span>" },
+  { time: 123, Text: "<span class='c123'>mujhse mil payega nhi</span>" },
+  { time: 126, Text: "<span class='c124'>Dekhun kyu rahe mai teri</span><br>" },
+  { time: 132, Text: "<span class='c125'>Dil se tu jayega nhi</span>" },
+  { time: 135, Text: "<span class='c126'>Tu dard samjhega ye nhi</span>" },
+  { time: 139, Text: "<span class='c127'>Mushkil hai aage Zindgi</span><br>" },
+  { time: 144, Text: "<span class='c128'>Mann tha bada, tu hota mera</span>" },
+  { time: 150, Text: "<span class='c129'>Tu na mila, ghum hai tera</span><br>" },
+  { time: 155, Text: "<span class='c130'>Kyun dia dard hume</span>" },
+  { time: 157, Text: "<span class='c131'>hum aaj talak na samjhe</span>" },
+  { time: 161, Text: "<span class='c132'>Bure hai kya itne</span>" },
+  { time: 162, Text: "<span class='c133'>Tum aa na sake jo milne</span>" },
+  { time: 167, Text: "<span class='c134'>Tu humko bhool gya</span>" },
+  { time: 169, Text: "<span class='c135'>Bus yrr hum hi pagal the</span>" },
+  { time: 174, Text: "<span class='c136'>Sochha Tumhe Jo Raat Din</span><br>" },
+  { time: 180, Text: "<span class='c137'>jo tu na mila mujhe</span>" },
+  { time: 183, Text: "<span class='c138'>jo tu na mila mujhe</span>" },
+  { time: 186, Text: "<span class='c139'>Dil ko Kya bataunga</span>" },
+  { time: 189, Text: "<span class='c140'>Dil ko Kya bataunga</span></span>" },
+  { time: 192, Text: "<span class='c141'>jo tu na mila mujhe</span></span>" },
+  { time: 195, Text: "<span class='c142'>jo tu na mila mujhe</span>" },
+  { time: 198, Text: "<span class='c143'>Dil ko Kya bataunga</span>" },
+  { time: 201, Text: "<span class='c144'>Dil ko Kya bataunga</span><br><br>" },
+  { time: 207, Text: "<span class='c145'>jo tu jo tu na mila mujhe</span><br><br>" },
+  { time: 213, Text: "<span class='c146'>Dil ko Kya bataunga</span>" },
+  { time: 218, Text: "<span class='c147'>Hmmm mmm mm....</span>" },
+  { time: 225, Text: "<span class='c148'>Dil ko Kya bataunga</span>" },
+];
+const lyricsdata2 = [
+  { time: 10, Text: "<br><h1 class='headingInLyrics'>Tum Hi Ho Lyrics</h1><br><br><span class='headingInLyrics'>[Verse 1]</span><br><span class='d101'>Hum tere bin ab reh nahi sakte</span>" },
+  { time: 15.7, Text: "<span class='d102'>Tere bina kya wajood mera?</span> <br>" },
+  { time: 26, Text: "<span class='d103'>Hum tere bin ab reh nahi sakte</span><br>" },
+  { time: 30.8, Text: "<span class='d104'>Tere bina kya wajood mera?</span><br>" },
+  { time: 35.6, Text: "<span class='d105'>Tujhse juda gar ho jayenge</span><br>" },
+  { time: 40.7, Text: "<span class='d106'>To khudse hi ho jayenge juda<br></span>" },
+
+  { time: 47, Text: "<br><span class='headingInLyrics'>[Chorus]</span><br>   <span class='d107'>Kyunki tum hi ho,</span>" },
+  { time: 51, Text: "<span class='d108'>ab tum hi ho<br></span>" },
+  { time: 53, Text: "<span class='d109'>Zindagi, ab tum hi ho<br></span>" },
+  { time: 58, Text: "<span class='d110'>Chain bhi, mera dard bhi<br></span>" },
+  { time: 64, Text: "<span class='d111'>Meri aashiqui, ab tum hi ho<br></span>" },
+
+
+  { time: 89, Text: "<br><span class='headingInLyrics'>[Verse 2]</span><span class='d112'><br>Tera mera rishta hai kaisa<br></span>" },
+  { time: 94, Text: "<span class='d113'>Ek pal dur gawara nahi</span><br>" },
+  { time: 99, Text: "<span class='d114'>Tere liye har roz hai jeete<br></span>" },
+  { time: 104, Text: "<span class='d115'>Tujhko diya mera waqt sabhi<br></span>" },
+  { time: 109, Text: "<br><span class='headingInLyrics'>[Pre-Chorus]</span><span class='d116'><br>Koi lamha mera na ho tere bina<br></span>" },
+  { time: 114, Text: "<span class='d117'>Har saans pe naam tera<br></span>" },
+
+  { time: 122, Text: "<br><span class='headingInLyrics'>[Chorus]</span><span class='d118'><br>Kyunki tum hi ho<br></span>" },
+  { time: 125, Text: "<span class='d119'>ab tum hi ho<br></span>" },
+  { time: 128, Text: "<span class='d120'>Zindagi, ab tum hi ho<br></span>" },
+  { time: 133, Text: "<span class='d121'> Chain bhi, mera dard bhi<br></span>" },
+  { time: 137.5, Text: "<span class='d122'>Meri aashiqui, ab tum hi ho<br></span>" },
+
+
+  //    <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
+
+
+  { time: 123, Text: "<span class='c123'></span>" },
+  { time: 126, Text: "<span class='c124'></span>" },
+  { time: 132, Text: "<span class='c125'></span>" },
+  { time: 135, Text: "<span class='c126'></span>" },
+  { time: 139, Text: "<span class='c127'></span>" },
+  { time: 144, Text: "<span class='c128'></span>" },
+  { time: 150, Text: "<span class='c129'></span>" },
+  { time: 155, Text: "<span class='c130'></span>" },
+  { time: 157, Text: "<span class='c131'></span>" },
+  { time: 161, Text: "<span class='c132'></span>" },
+  { time: 162, Text: "<span class='c133'></span>" },
+  { time: 167, Text: "<span class='c134'></span>" },
+  { time: 169, Text: "<span class='c135'></span>" },
+  { time: 174, Text: "<span class='c136'></span><br>" },
+  { time: 180, Text: "<span class='c137'>jo tu na mila mujhe</span>" },
+  { time: 183, Text: "<span class='c138'>jo tu na mila mujhe</span>" },
+  { time: 186, Text: "<span class='c139'>Dil ko Kya bataunga</span>" },
+  { time: 189, Text: "<span class='c140'>Dil ko Kya bataunga</span></span>" },
+  { time: 192, Text: "<span class='c141'>jo tu na mila mujhe</span></span>" },
+  { time: 195, Text: "<span class='c142'>jo tu na mila mujhe</span>" },
+  { time: 198, Text: "<span class='c143'>Dil ko Kya bataunga</span>" },
+  { time: 201, Text: "<span class='c144'>Dil ko Kya bataunga</span><br><br>" },
+  { time: 207, Text: "<span class='c145'>jo tu jo tu na mila mujhe</span><br><br>" },
+  { time: 213, Text: "<span class='c146'>Dil ko Kya bataunga</span>" },
+  { time: 218, Text: "<span class='c147'>Hmmm mmm mm....</span>" },
+  { time: 225, Text: "<span class='c148'>Dil ko Kya bataunga</span>" },
+];
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let userName = localStorage.getItem("userName");
 
@@ -119,6 +239,41 @@ preMenu.addEventListener('click', () => {
 
 
 
+function menuBarCloser(){
+  if (window.getComputedStyle(menuBar).display == "grid") {
+    menuBar.style.setProperty('display','none', 'important');
+  };
+};
+function menuBarLoader(){
+  menuBar.style.display = 'grid';
+};
+
+function loadLyrics() {
+  if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
+    HomeCloser();
+    menuBarCloser();
+    contOfLyricsDiv.style.setProperty('display', 'flex');
+    divExtraBali2.style.display = "inherit";
+musicplay.style.setProperty('bottom', "58px");
+  };
+};
+
+function closeLyrics() {
+  contOfLyricsDiv.style.setProperty('display', 'none');
+  divExtraBali2.style.display = "";
+  musicplay.style.setProperty('bottom', "75px");
+  if (fullLyrics.textContent === "> <") {
+    lyricsdivmain1.style.width = "";
+    lyricsdivmain1.style.height = "";
+    lyricsdivmain2.style.width = "";
+    lyricsdivmain2.style.setProperty('margin', '');
+    divExtraBali2.style.display = "";
+    fullLyrics.textContent = "< >";
+  };
+};
+
+
+
 
 
 
@@ -134,6 +289,7 @@ const seekBar = document.getElementById('seekBar');
 const volumeBar = document.getElementById('volumeBar');
 const songThumb = document.getElementById("song-thumb");
 const closeMusicPlay = document.getElementById("closeMusicPlay");
+const likeSong = document.getElementById("likeSong");
 
 
 const song1 = document.getElementById("song1");
@@ -160,6 +316,7 @@ const audiotime = document.getElementById('audiotime');
 const songduration = document.getElementById('songduration');
 
 const musicplay = document.getElementById('musicplay');
+
 
 const lyrics = document.getElementById('lyrics');
 const lyricsdivclose = document.getElementById('lyricsdivclose');
@@ -192,6 +349,7 @@ song = lyricsnum;
 anyaudio = myaudio;
 songThumb.style.setProperty("background", thumbnail);
 songThumb.style.setProperty("background-size", "cover");
+
 
 
 
@@ -241,22 +399,26 @@ songThumb.style.setProperty("background-size", "cover");
     songduration.innerHTML = `${minutes2}:${seconds2}`;
 
 if(song == 1){
-    for (let i = 0; i < lyricsdata1.length; i++) {
+    for (let i = 0; i <= lyricsdata1.length; i++) {
       const meraSpan = document.querySelector(`.c${i + 101}`);
-      if (myaudio.currentTime >= lyricsdata1[i].time) {
+      const mylyricsdata = lyricsdata1;
+      if (myaudio.currentTime >= mylyricsdata[i].time){
         setTimeout(() => {
           if (meraSpan) {
-            meraSpan.style.color = "yellow";
+            meraSpan.style.color = "orange";
           };
         });
       } else {
         if (meraSpan) {
-          meraSpan.style.color = "white";
+          meraSpan.style.color = "gray";
         };
       };
+
+    
       meraSpan.addEventListener('click', () => {
         anyaudio.currentTime = lyricsdata1[i].time;
       });
+    
     };}
     
     else if(song == 2 ){
@@ -273,14 +435,16 @@ if(song == 1){
             meraSpan2.style.color = "green";
           };
         };
+        if (meraSpan2) {
         meraSpan2.addEventListener('click', () => {
           anyaudio.currentTime = lyricsdata2[i].time;
         });
-  
+      };
     };};
   });
 
-  
+
+  loadLyrics();
 };
 
 
@@ -289,120 +453,11 @@ seekBar.addEventListener('input', () => {
   anyaudio.currentTime = seekBar.value;
 });
 
-volumeBar.addEventListener('input', () => {
-  anyaudio.volume = volumeBar.value;
-});
+// volumeBar.addEventListener('input', () => {
+//   anyaudio.volume = volumeBar.value;
+// });
 
 
-const lyricsdata1 = [
-  { time: 24, Text: "<br><span class='c101'>Kal the yahi</span>" },
-  { time: 27, Text: "<span class='c102'>Kyu ab nahi</span>" },
-  { time: 30, Text: "<span class='c103'>Tum aur mai saath dono</span><br>" },
-  { time: 36, Text: "<span class='c104'>Kya mil gyi tumko khusi</span>" },
-  { time: 42, Text: "<span class='c105'>Hoke juda yeh toh bolo</span><br>" },
-  { time: 47, Text: "<span class='c106'>Pyar tha waqt nahi</span>" },
-  { time: 49, Text: "<span class='c107'>jo beet gya do pal me</span>" },
-  { time: 53, Text: "<span class='c108'>tu banke yaad rahe</span>" },
-  { time: 55, Text: "<span class='c109'>fariyad rahega dil me</span><br>" },
-  { time: 59, Text: "<span class='c110'>Kyu ab ek lafz nhi,</span>" },
-  { time: 61, Text: "<span class='c111'>dil kahne ki haalat me</span>" },
-  { time: 66, Text: "<span class='c112'>Socha , kahunga ek din</span><br>" },
-  { time: 72, Text: "<span class='c113'>jo tu na mila mujhe</span>" },
-  { time: 75, Text: "<span class='c114'>jo tu na mila mujhe</span>" },
-  { time: 78, Text: "<span class='c115'>Dil ko Kya bataunga</span>" },
-  { time: 81, Text: "<span class='c116'>Dil ko Kya bataunga</span>" },
-  { time: 84, Text: "<span class='c117'>jo tu na mila mujhe</span>" },
-  { time: 87, Text: "<span class='c118'>jo tu na mila mujhe</span>" },
-  { time: 90, Text: "<span class='c119'>Dil ko Kya bataunga</span>" },
-  { time: 93, Text: "<span class='c120'>Dil ko Kya bataunga</span><br><br>" },
-  { time: 105, Text: "<span class='c121'>jo tu na mila mujhe</span><br><br>" },
-  { time: 120, Text: "<span class='c122'>Kah de tu aayega nhi</span>" },
-  { time: 123, Text: "<span class='c123'>mujhse mil payega nhi</span>" },
-  { time: 126, Text: "<span class='c124'>Dekhun kyu rahe mai teri</span><br>" },
-  { time: 132, Text: "<span class='c125'>Dil se tu jayega nhi</span>" },
-  { time: 135, Text: "<span class='c126'>Tu dard samjhega ye nhi</span>" },
-  { time: 139, Text: "<span class='c127'>Mushkil hai aage Zindgi</span><br>" },
-  { time: 144, Text: "<span class='c128'>Mann tha bada, tu hota mera</span>" },
-  { time: 150, Text: "<span class='c129'>Tu na mila, ghum hai tera</span><br>" },
-  { time: 155, Text: "<span class='c130'>Kyun dia dard hume</span>" },
-  { time: 157, Text: "<span class='c131'>hum aaj talak na samjhe</span>" },
-  { time: 161, Text: "<span class='c132'>Bure hai kya itne</span>" },
-  { time: 162, Text: "<span class='c133'>Tum aa na sake jo milne</span>" },
-  { time: 167, Text: "<span class='c134'>Tu humko bhool gya</span>" },
-  { time: 169, Text: "<span class='c135'>Bus yrr hum hi pagal the</span>" },
-  { time: 174, Text: "<span class='c136'>Sochha Tumhe Jo Raat Din</span><br>" },
-  { time: 180, Text: "<span class='c137'>jo tu na mila mujhe</span>" },
-  { time: 183, Text: "<span class='c138'>jo tu na mila mujhe</span>" },
-  { time: 186, Text: "<span class='c139'>Dil ko Kya bataunga</span>" },
-  { time: 189, Text: "<span class='c140'>Dil ko Kya bataunga</span></span>" },
-  { time: 192, Text: "<span class='c141'>jo tu na mila mujhe</span></span>" },
-  { time: 195, Text: "<span class='c142'>jo tu na mila mujhe</span>" },
-  { time: 198, Text: "<span class='c143'>Dil ko Kya bataunga</span>" },
-  { time: 201, Text: "<span class='c144'>Dil ko Kya bataunga</span><br><br>" },
-  { time: 207, Text: "<span class='c145'>jo tu jo tu na mila mujhe</span><br><br>" },
-  { time: 213, Text: "<span class='c146'>Dil ko Kya bataunga</span>" },
-  { time: 218, Text: "<span class='c147'>Hmmm mmm mm....</span>" },
-  { time: 225, Text: "<span class='c148'>Dil ko Kya bataunga</span>" },
-];
-const lyricsdata2 = [
-  { time: 10, Text: "<br><h1 class='headingInLyrics'>Tum Hi Ho Lyrics</h1><br><br><span class='headingInLyrics'>[Verse 1]</span><br><span class='d101'>Hum tere bin ab reh nahi sakte</span>" },
-  { time: 15.7, Text: "<span class='d102'>Tere bina kya wajood mera?</span> <br>" },
-  { time: 26, Text: "<span class='d103'>Hum tere bin ab reh nahi sakte</span><br>" },
-  { time: 30.8, Text: "<span class='d104'>Tere bina kya wajood mera?</span><br>" },
-  { time: 35.6, Text: "<span class='d105'>Tujhse juda gar ho jayenge</span><br>" },
-  { time: 40.7, Text: "<span class='d106'>To khudse hi ho jayenge juda<br></span>" },
-
-  { time: 47, Text: "<br><span class='headingInLyrics'>[Chorus]</span><br>   <span class='d107'>Kyunki tum hi ho,</span>" },
-  { time: 51, Text: "<span class='d108'>ab tum hi ho<br></span>" },
-  { time: 53, Text: "<span class='d109'>Zindagi, ab tum hi ho<br></span>" },
-  { time: 58, Text: "<span class='d110'>Chain bhi, mera dard bhi<br></span>" },
-  { time: 64, Text: "<span class='d111'>Meri aashiqui, ab tum hi ho<br></span>" },
-
-
-  { time: 89, Text: "<br><span class='headingInLyrics'>[Verse 2]</span><span class='d112'><br>Tera mera rishta hai kaisa<br></span>" },
-  { time: 94, Text: "<span class='d113'>Ek pal dur gawara nahi</span><br>" },
-  { time: 99, Text: "<span class='d114'>Tere liye har roz hai jeete<br></span>" },
-  { time: 104, Text: "<span class='d115'>Tujhko diya mera waqt sabhi<br></span>" },
-  { time: 109, Text: "<br><span class='headingInLyrics'>[Pre-Chorus]</span><span class='d116'><br>Koi lamha mera na ho tere bina<br></span>" },
-  { time: 114, Text: "<span class='d117'>Har saans pe naam tera<br></span>" },
-
-  { time: 122, Text: "<br><span class='headingInLyrics'>[Chorus]</span><span class='d118'><br>Kyunki tum hi ho<br></span>" },
-  { time: 125, Text: "<span class='d119'>ab tum hi ho<br></span>" },
-  { time: 128, Text: "<span class='d120'>Zindagi, ab tum hi ho<br></span>" },
-  { time: 133, Text: "<span class='d121'> Chain bhi, mera dard bhi<br></span>" },
-  { time: 137.5, Text: "<span class='d122'>Meri aashiqui, ab tum hi ho<br></span>" },
-
-
-  //    <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
-
-
-  { time: 123, Text: "<span class='c123'></span>" },
-  { time: 126, Text: "<span class='c124'></span>" },
-  { time: 132, Text: "<span class='c125'></span>" },
-  { time: 135, Text: "<span class='c126'></span>" },
-  { time: 139, Text: "<span class='c127'></span>" },
-  { time: 144, Text: "<span class='c128'></span>" },
-  { time: 150, Text: "<span class='c129'></span>" },
-  { time: 155, Text: "<span class='c130'></span>" },
-  { time: 157, Text: "<span class='c131'></span>" },
-  { time: 161, Text: "<span class='c132'></span>" },
-  { time: 162, Text: "<span class='c133'></span>" },
-  { time: 167, Text: "<span class='c134'></span>" },
-  { time: 169, Text: "<span class='c135'></span>" },
-  { time: 174, Text: "<span class='c136'></span><br>" },
-  { time: 180, Text: "<span class='c137'>jo tu na mila mujhe</span>" },
-  { time: 183, Text: "<span class='c138'>jo tu na mila mujhe</span>" },
-  { time: 186, Text: "<span class='c139'>Dil ko Kya bataunga</span>" },
-  { time: 189, Text: "<span class='c140'>Dil ko Kya bataunga</span></span>" },
-  { time: 192, Text: "<span class='c141'>jo tu na mila mujhe</span></span>" },
-  { time: 195, Text: "<span class='c142'>jo tu na mila mujhe</span>" },
-  { time: 198, Text: "<span class='c143'>Dil ko Kya bataunga</span>" },
-  { time: 201, Text: "<span class='c144'>Dil ko Kya bataunga</span><br><br>" },
-  { time: 207, Text: "<span class='c145'>jo tu jo tu na mila mujhe</span><br><br>" },
-  { time: 213, Text: "<span class='c146'>Dil ko Kya bataunga</span>" },
-  { time: 218, Text: "<span class='c147'>Hmmm mmm mm....</span>" },
-  { time: 225, Text: "<span class='c148'>Dil ko Kya bataunga</span>" },
-];
 
 song1.addEventListener("click", () => {
   song = 1;
@@ -449,43 +504,30 @@ song4.addEventListener("click", () => {
 lyrics.addEventListener('click', () => {
 
   if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
-    HomeCloser();
-    contOfLyricsDiv.style.setProperty('display', 'flex');
-    divExtraBali2.style.display = "inherit";
-
+loadLyrics();
   } else {
     HomeLoader();
     closeLyrics();
+    menuBarLoader();
   };
 
+});
+songThumb.addEventListener('click', () => {
+  loadLyrics();
 });
 
 
 
 
 
-
 //  time to close lyrics section
-function closeLyrics() {
-  contOfLyricsDiv.style.setProperty('display', 'none');
-  divExtraBali2.style.display = "";
-
-  if (fullLyrics.textContent === "> <") {
-    lyricsdivmain1.style.width = "";
-    lyricsdivmain1.style.height = "";
-    lyricsdivmain2.style.width = "";
-    lyricsdivmain2.style.setProperty('margin', '');
-    divExtraBali2.style.display = "";
-    fullLyrics.textContent = "< >";
-  };
-
-}
 
 closeMusicPlay.addEventListener('click', () => {
 
   if (contOfLyricsDiv.style.display === "flex") {
     closeLyrics();
     HomeLoader();
+    menuBarLoader();
   } else {
     musicplay.style.setProperty('display', "none");
     anyaudio.pause();
@@ -495,6 +537,8 @@ closeMusicPlay.addEventListener('click', () => {
 lyricsdivclose.addEventListener('click', () => {
   closeLyrics();
   HomeLoader();
+  menuBarLoader();
+
 });
 
 fullLyrics.addEventListener('click', () => {
@@ -517,3 +561,24 @@ fullLyrics.addEventListener('click', () => {
   }
 });
 
+
+
+let likeStatus = 'unliked';
+likeSong.addEventListener('click', ()=>{
+
+  if(likeStatus === 'unliked'){
+    likeSong.style.setProperty('background','url(media/yes-like.jpg)'); 
+    likeStatus = 'liked';
+    likeSong.style.setProperty('background-position','center');
+    likeSong.style.setProperty('background-size','70%');
+    likeSong.style.setProperty('background-repeat','no-repeat');
+    
+  }else{
+    likeStatus = 'unliked';
+    likeSong.style.setProperty('background','url(media/no-like.jpg)'); 
+    likeSong.style.setProperty('background-position','center');
+    likeSong.style.setProperty('background-size','70%');
+    likeSong.style.setProperty('background-repeat','no-repeat');
+    
+  };
+});

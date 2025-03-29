@@ -110,22 +110,21 @@
 
         <div class="musicplay" id="musicplay">
             <div class="song-thumb" id="song-thumb"></div>
-            <div class="flexcenter musicdiv">
-                <div class="aligncenter submusicdiv1">
-                    <div class="lyrics flexcenter" id="lyrics">Lyrics</div>
-                    <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1">
-                    <div class="lyrics closeMusicPlay flexcenter" id="closeMusicPlay">Close</div>
-                </div>
-                <div class="submusicdiv2">
-                    <div class="timeout flexcenter" id="audiotime">0:00</div>
-                    <input type="range" id="seekBar" value="0" step="1" min="0">
-                    <div class="timeout flexcenter" id="songduration">0:00</div>
-                </div>
-
+            <div class="musicdiv">
+                    <div class="makeAcircle flexcenter" id="lyrics">Lyrics</div>
+                    <!-- <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1"> -->
+                    <div class="makeAcircle closeMusicPlay flexcenter" id="closeMusicPlay">╳</div>
+                    <div id="playPauseBtn" class="makeAcircle"></div> 
+                    <div class="volBtn flexcenter makeAcircle id="volBtn">Vol</div>
+                    <div class="likeSong makeAcircle" id="likeSong"></div>
             </div>
-            <div id="playPauseBtn"></div>
         </div>
-        <div class="menuBar gridcenter" id="menuBar">
+        <div class="submusicdiv2">
+            <div class="timeout flexcenter" id="audiotime">0:00</div>
+            <input type="range" id="seekBar" value="0" step="1" min="0">
+            <div class="timeout flexcenter" id="songduration">0:00</div>
+        </div>
+        <div class="menuBar" id="menuBar">
             <div class="homeMenu c-menu flexcenter" id="homeMenu">Home</div>
             <div class="exploreMenu c-menu flexcenter" id="exploreMenu">Explore</div>
             <div class="likesMenu c-menu flexcenter" id="likesMenu">Likes</div>
