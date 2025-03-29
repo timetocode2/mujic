@@ -100,13 +100,56 @@ footer {
     border-radius: 100px;
     width: 50px;
     height: 50px;
-    border: none;
+    border: blue 2px solid;
+    background: linear-gradient(to right, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    display: flex;
+    justify-content: center;
+}
+#playPauseBtn:active {
+    transform: scale(0.95);
+    background-color: rgba(211, 214, 211, 0.363);
+}
+.circle{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
+.circle2{
+    width: 0px;
+    height: 0px;
+    border-radius: 2px;
+   border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 17px solid white;
+}
+
+.square{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+ 
+}
+.square1 {
+    width: 0px;
+    height: 0px;
+    border-radius: 2px;
+border: solid white;
+border-width: 11px 3px;
 
 }
-i{
-/* transform: scale(2.2); */
-/* transform-origin: center; */
+.square2 {
+    width: 0px;
+    height: 0px;
+    border-radius: 2px;
+    border: solid white;
+border-width: 11px 3px;
+
 }
+
 
 .timeout {
     margin-right: 5px;

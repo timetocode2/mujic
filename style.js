@@ -172,6 +172,15 @@ const divExtraBali2 = document.querySelector('.divExtraBali2');
 
 
 
+playPauseBtn.addEventListener('click', () => {
+  if (anyaudio.paused) {
+    anyaudio.play();
+    playPauseBtn.innerHTML = "<div class='square'><div class='square1'></div><div class='square2'></div></div>";
+  } else {
+    anyaudio.pause();
+    playPauseBtn.innerHTML = "<div class='circle'><div class='circle2'></div></div>";
+  }
+});
 
 let song = "";
 let anyaudio = "";
@@ -186,20 +195,24 @@ songThumb.style.setProperty("background-size", "cover");
 
 
 
-  const close111 = document.querySelectorAll("audio");
-  close111.forEach(close1 => {
+  let close111 = document.querySelectorAll("audio");
+  close111 = Array.from(close111);
+  close222 = close111.filter(close1 => close1.id !== audioId);
+
+  close222.forEach(close1 => {
     close1.pause();
+
   });
 
 
   if (myaudio.paused) {
     myaudio.play();
-     playPauseBtn.innerHtml = "<i class='fa fa-pause'>";
+     playPauseBtn.innerHTML = "<div class='square'><div class='square1'></div><div class='square2'></div></div>";
     musicplay.style.setProperty('display', "flex");
 
   } else {
     myaudio.pause();
-    musicplay.style.setProperty('display', "none");
+    playPauseBtn.innerHTML = "<div class='circle'><div class='circle2'></div></div>";
 
   };
 
@@ -244,7 +257,9 @@ if(song == 1){
       meraSpan.addEventListener('click', () => {
         anyaudio.currentTime = lyricsdata1[i].time;
       });
-    };}else if(song == 2 ){
+    };}
+    
+    else if(song == 2 ){
       for (let i = 0; i < lyricsdata2.length; i++) {
         const meraSpan2 = document.querySelector(`.d${i + 101}`);
         if (myaudio.currentTime >= lyricsdata2[i].time) {
@@ -269,15 +284,6 @@ if(song == 1){
 };
 
 
-playPauseBtn.addEventListener('click', () => {
-  if (anyaudio.paused) {
-    anyaudio.play();
-    playPauseBtn.innerHtml = "<i class='fa fa-pause'>";
-  } else {
-    anyaudio.pause();
-    playPauseBtn.innerHtml = "<i class='fa fa-play'>";
-  }
-});
 
 seekBar.addEventListener('input', () => {
   anyaudio.currentTime = seekBar.value;
@@ -405,6 +411,11 @@ song1.addEventListener("click", () => {
     lyricsdivmain1.innerHTML += lyricsdata1[i].Text;
   };
   lyricsdivmain2.innerHTML = `Listen Jo tu na mila on yt<iframe width="340" height="192" src="https://www.youtube.com/embed/wPqpmsYISBc?si=_OswlQxXZSM1534X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+});
+song1.addEventListener("dblclick", () => {
+  HomeCloser();
+  contOfLyricsDiv.style.setProperty('display', 'flex');
+  divExtraBali2.style.display = "inherit";
 });
 
 song2.addEventListener("click", () => {
