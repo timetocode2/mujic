@@ -456,7 +456,6 @@ myaudioId = audioId;
   });
 
 
-  loadLyrics();
 };
 
 
