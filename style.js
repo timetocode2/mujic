@@ -249,7 +249,7 @@ function menuBarLoader() {
 };
 
 function loadLyrics() {
-  if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
+  if (window.getComputedStyle(contOfLyricsDiv).display == "none") {
     HomeCloser();
     menuBarCloser();
 
@@ -264,6 +264,8 @@ function loadLyrics() {
 };
 
 function closeLyrics() {
+  if (window.getComputedStyle(contOfLyricsDiv).display === "flex") {
+
   contOfLyricsDiv.style.setProperty('display', 'none');
   divExtraBali2.style.display = "";
   musicplay.style.setProperty('bottom', "75px");
@@ -275,6 +277,10 @@ function closeLyrics() {
     divExtraBali2.style.display = "";
     fullLyrics.textContent = "< >";
   };
+
+  HomeLoader();
+  menuBarLoader();
+};
 };
 
 
@@ -518,8 +524,11 @@ lyrics.addEventListener('click', () => {
   };
 
 });
+
 songThumb.addEventListener('click', () => {
-  loadLyrics();
+  if (window.getComputedStyle(contOfLyricsDiv).display == "none") {
+loadLyrics(); 
+  }else{closeLyrics();};
 });
 
 
@@ -542,9 +551,6 @@ closeMusicPlay.addEventListener('click', () => {
 
 lyricsdivclose.addEventListener('click', () => {
   closeLyrics();
-  HomeLoader();
-  menuBarLoader();
-
 });
 
 fullLyrics.addEventListener('click', () => {
