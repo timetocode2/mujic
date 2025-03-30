@@ -266,21 +266,21 @@ function loadLyrics() {
 function closeLyrics() {
   if (window.getComputedStyle(contOfLyricsDiv).display === "flex") {
 
-  contOfLyricsDiv.style.setProperty('display', 'none');
-  divExtraBali2.style.display = "";
-  musicplay.style.setProperty('bottom', "75px");
-  if (fullLyrics.textContent === "> <") {
-    lyricsdivmain1.style.width = "";
-    lyricsdivmain1.style.height = "";
-    lyricsdivmain2.style.width = "";
-    lyricsdivmain2.style.setProperty('margin', '');
+    contOfLyricsDiv.style.setProperty('display', 'none');
     divExtraBali2.style.display = "";
-    fullLyrics.textContent = "< >";
-  };
+    musicplay.style.setProperty('bottom', "75px");
+    if (fullLyrics.textContent === "> <") {
+      lyricsdivmain1.style.width = "";
+      lyricsdivmain1.style.height = "";
+      lyricsdivmain2.style.width = "";
+      lyricsdivmain2.style.setProperty('margin', '');
+      divExtraBali2.style.display = "";
+      fullLyrics.textContent = "< >";
+    };
 
-  HomeLoader();
-  menuBarLoader();
-};
+    HomeLoader();
+    menuBarLoader();
+  };
 };
 
 
@@ -353,12 +353,20 @@ playPauseBtn.addEventListener('click', () => {
 let song = "";
 let anyaudio = "";
 let myaudioId = "";
+let mythumbnail = "";
+
 function playaudio(audioId, thumbnail, lyricsnum) {
-myaudioId = audioId;
+  playAudio2nd(audioId, thumbnail, lyricsnum);
+};
+
+function playAudio2nd(audioId, thumbnail, lyricsnum) {
+
+  myaudioId = audioId;
+  mythumbnail = thumbnail;
   const myaudio = document.getElementById(audioId);
   song = lyricsnum;
   anyaudio = myaudio;
-  songThumb.style.setProperty("background" , thumbnail);
+  songThumb.style.setProperty("background", thumbnail);
   songThumb.style.setProperty("background-size", "cover");
 
 
@@ -456,7 +464,22 @@ myaudioId = audioId;
   });
 
 
+
+  if (document.getElementById(`like${myaudioId}`)) {
+    likeSong.style.setProperty('background', 'url(media/yes-like.jpg)');
+    likeSong.style.setProperty('background-position', 'center');
+    likeSong.style.setProperty('background-size', '70%');
+    likeSong.style.setProperty('background-repeat', 'no-repeat');
+
+  } else {
+    likeSong.style.setProperty('background', 'url(media/no-like.jpg)');
+    likeSong.style.setProperty('background-position', 'center');
+    likeSong.style.setProperty('background-size', '70%');
+    likeSong.style.setProperty('background-repeat', 'no-repeat');
+
+  };
 };
+
 
 
 
@@ -469,15 +492,19 @@ seekBar.addEventListener('input', () => {
 // });
 
 
-
-song1.addEventListener("click", () => {
-  song = 1;
+function mysong1() {
   lyricsdivmain1.innerHTML = " "
   for (let i = 0; i < lyricsdata1.length; i++) {
     lyricsdivmain1.innerHTML += lyricsdata1[i].Text;
   };
   lyricsdivmain2.innerHTML = `Listen Jo tu na mila on yt<iframe width="340" height="192" src="https://www.youtube.com/embed/wPqpmsYISBc?si=_OswlQxXZSM1534X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+};
+
+song1.addEventListener("click", () => {
+  song = 1;
+  mysong1();
 });
+
 song1.addEventListener("dblclick", () => {
   HomeCloser();
   contOfLyricsDiv.style.setProperty('display', 'flex');
@@ -526,8 +553,8 @@ lyrics.addEventListener('click', () => {
 
 songThumb.addEventListener('click', () => {
   if (window.getComputedStyle(contOfLyricsDiv).display == "none") {
-loadLyrics(); 
-  }else{closeLyrics();};
+    loadLyrics();
+  } else { closeLyrics(); };
 });
 
 
@@ -579,31 +606,50 @@ likeSong.addEventListener('click', () => {
   let likeTemplate = document.createElement('div');
   likeTemplate.classList.add('likeTemplate');
   likeTemplate.setAttribute('id', `like${myaudioId}`);
-let existingLikeTemplate = document.getElementById(`like${myaudioId}`);
+  likeTemplate.setAttribute('onclick', `playAudio2nd('${myaudioId}', '${mythumbnail}', ${song})`);
+  let existingLikeTemplate = document.getElementById(`like${myaudioId}`);
+
 
   if (existingLikeTemplate) {
-likesDiv.removeChild(existingLikeTemplate);
+    likesDiv.removeChild(existingLikeTemplate);
 
-likeSong.style.setProperty('background', 'url(media/no-like.jpg)');
-likeSong.style.setProperty('background-position', 'center');
-likeSong.style.setProperty('background-size', '70%');
-likeSong.style.setProperty('background-repeat', 'no-repeat');
+    likeSong.style.setProperty('background', 'url(media/no-like.jpg)');
+    likeSong.style.setProperty('background-position', 'center');
+    likeSong.style.setProperty('background-size', '70%');
+    likeSong.style.setProperty('background-repeat', 'no-repeat');
 
-}else{
-  likesDiv.appendChild(likeTemplate);
-  
-  likeSong.style.setProperty('background', 'url(media/yes-like.jpg)');
-  likeSong.style.setProperty('background-position', 'center');
-  likeSong.style.setProperty('background-size', '70%');
-  likeSong.style.setProperty('background-repeat', 'no-repeat');
+  } else {
+    likesDiv.appendChild(likeTemplate);
 
-};
+    likeSong.style.setProperty('background', 'url(media/yes-like.jpg)');
+    likeSong.style.setProperty('background-position', 'center');
+    likeSong.style.setProperty('background-size', '70%');
+    likeSong.style.setProperty('background-repeat', 'no-repeat');
 
-likeTemplate.innerHTML = `<div class='song-thumb' id='thumb${myaudioId}'></div>`;
-const thumb = document.getElementById(`thumb${myaudioId}`);
-thumb.style.setProperty("background", songThumb.style.background);
+  };
 
-
-
+  likeTemplate.innerHTML = `<div class='song-thumb' id='thumb${myaudioId}'></div>`;
+  const thumb = document.getElementById(`thumb${myaudioId}`);
+  thumb.style.setProperty("background", songThumb.style.background);
 
 });
+
+likeSong.addEventListener('', () => {
+  
+});
+
+
+
+
+
+
+
+
+
+for (i = 1; i <= 18; i++) {
+  
+  const LikeSongPlay = document.getElementById(`likemyaudio${i}`);
+  LikeSongPlay.addEventListener('click', () => {
+    playAudio2nd();
+  });
+}

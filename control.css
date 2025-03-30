@@ -59,7 +59,7 @@ footer {
 }
 
 .song-thumb {
-    border: 0.00001px #ffffff63 solid;
+    border: 1px blue solid;
 
     border-radius: 8px;
     width: 20vw;
@@ -68,7 +68,6 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
-    box-shadow: #2765eb 4px 4px 0px;
 
 }
 
@@ -211,10 +210,11 @@ border-width: 11px 3px;
 }
 .likeTemplate{
     width: 95%;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    margin: 10px 2px;
+    align-items: center;
+    margin: 8px 2px 8px 2px;
     background: rgba(243, 218, 75, 0.397);
     flex-shrink: 0;
     border-radius: 8px;
@@ -222,7 +222,7 @@ border-width: 11px 3px;
 }
 .likesDivTopText{
     font-size: 25px;
-    margin-bottom: 15px;
+    margin: 5px 0px 13px 0px ;
 }
 
 
