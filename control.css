@@ -199,8 +199,31 @@ border-width: 11px 3px;
     background-repeat: no-repeat;
 }
 
-
-
+.likes-div{
+    width: 100%;
+    height:calc(90vh - 120px);
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5px;
+}
+.likeTemplate{
+    width: 95%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 2px;
+    background: rgba(243, 218, 75, 0.397);
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: white 1px solid;
+}
+.likesDivTopText{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
 
 
 

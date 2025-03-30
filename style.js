@@ -141,14 +141,11 @@ const preMenu = document.getElementById('preMenu');
 
 const footerMain = document.getElementById('footer-main');
 const exploreDiv = document.getElementById('explore-div');
+const likesDiv = document.getElementById('likes-div');
 const premiumDiv = document.getElementById('premium-div');
 
 
-function HomeCloser() {
-  header.style.setProperty('display', 'none', 'important');
-  divExtraBali.style.setProperty('border', 'none');
-  allsongaccess.style.setProperty('display', 'none');
-};
+
 
 
 function HomeLoader() {
@@ -158,25 +155,45 @@ function HomeLoader() {
 
 }
 
+function HomeCloser() {
+  if (window.getComputedStyle(header).display === 'flex') {
+    header.style.setProperty('display', 'none', 'important');
+    divExtraBali.style.setProperty('border', 'none');
+    allsongaccess.style.setProperty('display', 'none');
+  };
+};
+
 function ExploreLoader() {
   footerMain.style.setProperty('display', 'flex');
   exploreDiv.style.display = 'flex';
 };
 
 function ExploreCloser() {
-  if (exploreDiv.style.display === 'flex') {
+  if (window.getComputedStyle(exploreDiv).display === 'flex') {
     exploreDiv.style.display = 'none';
-  }
+  };
 };
+
+function likesLoader() {
+  footerMain.style.setProperty('display', 'flex');
+  likesDiv.style.display = 'flex';
+};
+
+function likesCloser() {
+  if (window.getComputedStyle(likesDiv).display === 'flex') {
+    likesDiv.style.display = 'none';
+  };
+};
+
 function PreLoader() {
   footerMain.style.display = 'flex';
   premiumDiv.style.display = 'flex';
 };
 
 function PreCloser() {
-  if (premiumDiv.style.display === 'flex') {
+  if (window.getComputedStyle(premiumDiv).display === 'flex') {
     premiumDiv.style.display = 'none';
-  }
+  };
 };
 
 
@@ -184,9 +201,6 @@ function PreCloser() {
 
 homeMenu.addEventListener('click', () => {
   HomeLoader();
-  if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
-    closeLyrics();
-  };
   if (footerMain.style.display === 'flex') {
     footerMain.style.display = 'none';
   };
@@ -198,11 +212,8 @@ exploreMenu.addEventListener('click', () => {
   };
 
   HomeCloser();
-
-  if (premiumDiv.style.display === 'flex') {
-    PreCloser();
-  };
-
+  PreCloser();
+  likesCloser();
   ExploreLoader();
 });
 
@@ -211,40 +222,29 @@ likesMenu.addEventListener('click', () => {
     closeLyrics();
   };
   HomeCloser();
-  if (exploreDiv.style.display = 'flex') {
-    ExploreCloser();
-  };
-  if (premiumDiv.style.display === 'flex') {
-    PreCloser();
-  };
-
+  ExploreCloser();
+  PreCloser();
+  likesLoader();
 });
 
 preMenu.addEventListener('click', () => {
   if (window.getComputedStyle(lyricsdivmain1).display === "flex") {
     closeLyrics();
   };
-  if (window.getComputedStyle(header).display === "flex") {
-    HomeCloser();
-  };
-
-  if (exploreDiv.style.display = 'flex') {
-    ExploreCloser();
-  };
-
+  HomeCloser();
+  ExploreCloser();
+  likesCloser();
   PreLoader();
-
 });
 
 
 
-
-function menuBarCloser(){
+function menuBarCloser() {
   if (window.getComputedStyle(menuBar).display == "grid") {
-    menuBar.style.setProperty('display','none', 'important');
+    menuBar.style.setProperty('display', 'none', 'important');
   };
 };
-function menuBarLoader(){
+function menuBarLoader() {
   menuBar.style.display = 'grid';
 };
 
@@ -252,9 +252,14 @@ function loadLyrics() {
   if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
     HomeCloser();
     menuBarCloser();
+
+    if (footerMain.style.display === 'flex') {
+      footerMain.style.display = 'none';
+    };
+
     contOfLyricsDiv.style.setProperty('display', 'flex');
     divExtraBali2.style.display = "inherit";
-musicplay.style.setProperty('bottom', "58px");
+    musicplay.style.setProperty('bottom', "58px");
   };
 };
 
@@ -341,15 +346,14 @@ playPauseBtn.addEventListener('click', () => {
 
 let song = "";
 let anyaudio = "";
-
+let myaudioId = "";
 function playaudio(audioId, thumbnail, lyricsnum) {
-
-const myaudio = document.getElementById(audioId);
-song = lyricsnum;
-anyaudio = myaudio;
-songThumb.style.setProperty("background", thumbnail);
-songThumb.style.setProperty("background-size", "cover");
-
+myaudioId = audioId;
+  const myaudio = document.getElementById(audioId);
+  song = lyricsnum;
+  anyaudio = myaudio;
+  songThumb.style.setProperty("background" , thumbnail);
+  songThumb.style.setProperty("background-size", "cover");
 
 
 
@@ -365,7 +369,7 @@ songThumb.style.setProperty("background-size", "cover");
 
   if (myaudio.paused) {
     myaudio.play();
-     playPauseBtn.innerHTML = "<div class='square'><div class='square1'></div><div class='square2'></div></div>";
+    playPauseBtn.innerHTML = "<div class='square'><div class='square1'></div><div class='square2'></div></div>";
     musicplay.style.setProperty('display', "flex");
 
   } else {
@@ -398,30 +402,31 @@ songThumb.style.setProperty("background-size", "cover");
     seconds2 = seconds2 < 10 ? "0" + seconds2 : seconds2;
     songduration.innerHTML = `${minutes2}:${seconds2}`;
 
-if(song == 1){
-    for (let i = 0; i <= lyricsdata1.length; i++) {
-      const meraSpan = document.querySelector(`.c${i + 101}`);
-      const mylyricsdata = lyricsdata1;
-      if (myaudio.currentTime >= mylyricsdata[i].time){
-        setTimeout(() => {
+    if (song == 1) {
+      for (let i = 0; i <= lyricsdata1.length; i++) {
+        const meraSpan = document.querySelector(`.c${i + 101}`);
+        const mylyricsdata = lyricsdata1;
+        if (myaudio.currentTime >= mylyricsdata[i].time) {
+          setTimeout(() => {
+            if (meraSpan) {
+              meraSpan.style.color = "orange";
+            };
+          });
+        } else {
           if (meraSpan) {
-            meraSpan.style.color = "orange";
+            meraSpan.style.color = 'gray';
           };
-        });
-      } else {
-        if (meraSpan) {
-          meraSpan.style.color = "gray";
         };
-      };
 
-    
-      meraSpan.addEventListener('click', () => {
-        anyaudio.currentTime = lyricsdata1[i].time;
-      });
-    
-    };}
-    
-    else if(song == 2 ){
+
+        meraSpan.addEventListener('click', () => {
+          anyaudio.currentTime = lyricsdata1[i].time;
+        });
+
+      };
+    }
+
+    else if (song == 2) {
       for (let i = 0; i < lyricsdata2.length; i++) {
         const meraSpan2 = document.querySelector(`.d${i + 101}`);
         if (myaudio.currentTime >= lyricsdata2[i].time) {
@@ -436,11 +441,12 @@ if(song == 1){
           };
         };
         if (meraSpan2) {
-        meraSpan2.addEventListener('click', () => {
-          anyaudio.currentTime = lyricsdata2[i].time;
-        });
+          meraSpan2.addEventListener('click', () => {
+            anyaudio.currentTime = lyricsdata2[i].time;
+          });
+        };
       };
-    };};
+    };
   });
 
 
@@ -504,7 +510,7 @@ song4.addEventListener("click", () => {
 lyrics.addEventListener('click', () => {
 
   if (window.getComputedStyle(contOfLyricsDiv).display === "none") {
-loadLyrics();
+    loadLyrics();
   } else {
     HomeLoader();
     closeLyrics();
@@ -563,22 +569,36 @@ fullLyrics.addEventListener('click', () => {
 
 
 
-let likeStatus = 'unliked';
-likeSong.addEventListener('click', ()=>{
+likeSong.addEventListener('click', () => {
 
-  if(likeStatus === 'unliked'){
-    likeSong.style.setProperty('background','url(media/yes-like.jpg)'); 
-    likeStatus = 'liked';
-    likeSong.style.setProperty('background-position','center');
-    likeSong.style.setProperty('background-size','70%');
-    likeSong.style.setProperty('background-repeat','no-repeat');
-    
-  }else{
-    likeStatus = 'unliked';
-    likeSong.style.setProperty('background','url(media/no-like.jpg)'); 
-    likeSong.style.setProperty('background-position','center');
-    likeSong.style.setProperty('background-size','70%');
-    likeSong.style.setProperty('background-repeat','no-repeat');
-    
-  };
+  let likeTemplate = document.createElement('div');
+  likeTemplate.classList.add('likeTemplate');
+  likeTemplate.setAttribute('id', `like${myaudioId}`);
+let existingLikeTemplate = document.getElementById(`like${myaudioId}`);
+
+  if (existingLikeTemplate) {
+likesDiv.removeChild(existingLikeTemplate);
+
+likeSong.style.setProperty('background', 'url(media/no-like.jpg)');
+likeSong.style.setProperty('background-position', 'center');
+likeSong.style.setProperty('background-size', '70%');
+likeSong.style.setProperty('background-repeat', 'no-repeat');
+
+}else{
+  likesDiv.appendChild(likeTemplate);
+  
+  likeSong.style.setProperty('background', 'url(media/yes-like.jpg)');
+  likeSong.style.setProperty('background-position', 'center');
+  likeSong.style.setProperty('background-size', '70%');
+  likeSong.style.setProperty('background-repeat', 'no-repeat');
+
+};
+
+likeTemplate.innerHTML = `<div class='song-thumb' id='thumb${myaudioId}'></div>`;
+const thumb = document.getElementById(`thumb${myaudioId}`);
+thumb.style.setProperty("background", songThumb.style.background);
+
+
+
+
 });
