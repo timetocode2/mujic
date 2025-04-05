@@ -359,27 +359,45 @@ playPauseBtn.addEventListener('click', () => {
 
 
 function mysong1() {
-  lyricsdivmain1.innerHTML = " "
+  if( song != 1){
+  lyricsdivmain1.innerHTML = " ";
+  };
   for (let i = 0; i < lyricsdata1.length; i++) {
     lyricsdivmain1.innerHTML += lyricsdata1[i].Text;
   };
   lyricsdivmain2.innerHTML = `Listen Jo tu na mila on yt<iframe width="340" height="192" src="https://www.youtube.com/embed/wPqpmsYISBc?si=_OswlQxXZSM1534X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 };
 function mysong2() {
-  lyricsdivmain1.innerHTML = " ";
-  for (let i = 0; i < lyricsdata2.length; i++) {
+  if( song != 2){
+    lyricsdivmain1.innerHTML = " ";
+    };
+    for (let i = 0; i < lyricsdata2.length; i++) {
     lyricsdivmain1.innerHTML += lyricsdata2[i].Text;
   };
 
   // lyricsdivmain1.innerHTML = "<h1 class='headingInLyrics'>Tum Hi Ho Lyrics</h1><br><br><span class='headingInLyrics'>[Verse 1]</span><br>Hum tere bin ab reh nahi sakte<br>Tere bina kya wajood mera?<br>Hum tere bin ab reh nahi sakte<br>Tere bina kya wajood mera?<br>Tujhse juda gar ho jayenge<br>To khudse hi ho jayenge juda<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Verse 2]</span><br>Tera mera rishta hai kaisa<br>Ek pal dur gawara nahi<br>Tere liye har roz hai jeete<br>Tujhko diya mera waqt sabhi<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Koi lamha mera na ho tere bina<br>Har saans pe naam tera<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Bridge]</span><br>Tum hi ho<br>Tum hi ho<br>Tere liye hi jiya main<br>Khudko jo yun de diya hai<br>Teri wafa ne mujhko sambhala<br>Sare ghamon ko dil se nikala<br> <br><span class='headingInLyrics'>[Pre-Chorus]</span><br>Tere saath mera hai naseeb juda<br>Tujhe paake aadura na raha<br> <br><span class='headingInLyrics'>[Chorus]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho<br> <br><span class='headingInLyrics'>[Outro]</span><br>Kyunki tum hi ho, ab tum hi ho<br>Zindagi, ab tum hi ho<br>Chain bhi, mera dard bhi<br>Meri aashiqui, ab tum hi ho";
   lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="https://www.youtube.com/embed/asxmdFaIock?si=tTMSwLlZo9jX3pJn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 };
+<<<<<<< Updated upstream
 function mysong3() {
   lyricsdivmain1.innerHTML = " ";
   lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 };
 function mysong4() {
+=======
+function mysong3(){
+  if( song != 3){
+    lyricsdivmain1.innerHTML = " ";
+    };
+    lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
+};
+function mysong4(){
+  if( song != 4){
+    lyricsdivmain1.innerHTML = " ";
+    };  
+>>>>>>> Stashed changes
   lyricsdivmain1.innerHTML = "<span style='color: white;'>panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>haye o ta ra ra ru<br>haye o ta ra ra ru<br>panna ki tamanna hal ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br>hira toh pehle hi kisi aur kaa ho chuka<br>hira toh pehle hi kisi aur kaa ho chuka<br>kissi ki, madbhari aankho me kho chuka<br>yado ki bas dhul ban chuka dil kaa phul<br>sine pe mai rakh du jo hath<br>phir khil jaye chahe meri jaan jaye chahe meraa dil jaye <br> ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br> dil toh dete hai lete hai log kayi baar <br> dil toh dete hai lete hai log kayi baar <br>huwa kya, kisi se, kiya tha tumne pyar<br>yado ko chhod de, wado ko tod de<br>apni  jagah se kaise parbat hil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br> <br> bhula naa mere dil ko kabhi jis kaa khayal<br>bhula naa mere dil ko kabhi jis kaa khayal<br>ho sake, toh use, mere dil se tu nikal<br>naa karu mai yeh kam toh nahi meraa naam<br>naa karu mai yeh kam toh nahi meraa naam<br>baton se yeh jakhme-jigar kaise sil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho panna ki tamanna hai ke hira mujhe mil jaye<br>chahe meri jaan jaye chahe meraa dil jaye<br>ho le lo, ta ra ra ru, ho le lo, ta ra ra ru</span>";
   lyricsdivmain2.innerHTML = `Listen Tum hi ho on yt<iframe width="340" height="192" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
@@ -457,6 +475,7 @@ function playAudio2nd(audioId, thumbnail, lyricsnum) {
 
 
     if (song == 1) {
+      mysong1();
       for (let i = 0; i < lyricsdata1.length; i++) {
         const meraSpan = document.querySelector(`.c${i + 101}`);
         if (myaudio.currentTime >= lyricsdata1[i].time) {
@@ -477,9 +496,8 @@ function playAudio2nd(audioId, thumbnail, lyricsnum) {
         });
 
       };
-    }
 
-    else if (song == 2) {
+    }else if (song == 2) {
       for (let i = 0; i < lyricsdata2.length; i++) {
         const meraSpan2 = document.querySelector(`.d${i + 101}`);
         if (myaudio.currentTime >= lyricsdata2[i].time) {
@@ -499,6 +517,51 @@ function playAudio2nd(audioId, thumbnail, lyricsnum) {
           });
         };
       };
+      mysong2();
+    }else if (song == 3) {
+      mysong3();
+      // for (let i = 0; i < lyricsdata1.length; i++) {
+      //   const meraSpan = document.querySelector(`.c${i + 101}`);
+      //   if (myaudio.currentTime >= lyricsdata1[i].time) {
+      //     setTimeout(() => {
+      //       if (meraSpan) {
+      //         meraSpan.style.color = "orange";
+      //       };
+      //     });
+      //   } else {
+      //     if (meraSpan) {
+      //       meraSpan.style.color = 'gray';
+      //     };
+      //   };
+
+
+      //   meraSpan.addEventListener('click', () => {
+      //     anyaudio.currentTime = lyricsdata1[i].time;
+      //   });
+
+      // };
+    }else if (song == 4) {
+      mysong4();
+      // for (let i = 0; i < lyricsdata1.length; i++) {
+      //   const meraSpan = document.querySelector(`.c${i + 101}`);
+      //   if (myaudio.currentTime >= lyricsdata1[i].time) {
+      //     setTimeout(() => {
+      //       if (meraSpan) {
+      //         meraSpan.style.color = "orange";
+      //       };
+      //     });
+      //   } else {
+      //     if (meraSpan) {
+      //       meraSpan.style.color = 'gray';
+      //     };
+      //   };
+
+
+      //   meraSpan.addEventListener('click', () => {
+      //     anyaudio.currentTime = lyricsdata1[i].time;
+      //   });
+
+      // };
     };
   });
 
@@ -518,6 +581,7 @@ function playAudio2nd(audioId, thumbnail, lyricsnum) {
 
   };
 
+<<<<<<< Updated upstream
   if (song == 1) {
     mysong1();
   } else if (song == 2) {
@@ -527,6 +591,8 @@ function playAudio2nd(audioId, thumbnail, lyricsnum) {
   } else if (song == 4) {
     mysong4();
   };
+=======
+>>>>>>> Stashed changes
 };
 
 
@@ -643,6 +709,7 @@ likeSong.addEventListener('click', () => {
 
 });
 
+<<<<<<< Updated upstream
 // likeSong.addEventListener('', () => {
 
 // });
@@ -688,3 +755,25 @@ document.querySelectorAll('[id^="likemyaudio"]').forEach((LikeSongPlay) => {
     }
   });
 });
+=======
+// document.querySelectorAll('[id^="likemyaudio"]').forEach((LikeSongPlay) => {
+//   LikeSongPlay.addEventListener('click', () => {
+//     playAudio2nd();
+  
+//     switch (LikeSongPlay.id) {
+//       case 'likemyaudio1':
+//         mysong1();
+//         break;
+//       case 'likemyaudio2':
+//         mysong2();
+//         break;
+//       case 'likemyaudio3':
+//         mysong3();
+//         break;
+//       case 'likemyaudio4':
+//         mysong4();
+//         break;
+//     }
+//   });
+// });
+>>>>>>> Stashed changes
