@@ -100,7 +100,7 @@ const lyricsdata2 = [
   { time: 230, Text: "<span class='d137'><br>ab tum hi ho</span>" },
   { time: 233, Text: "<span class='d138'> <br>Zindagi, ab tum hi ho</span>" },
   { time: 238, Text: "<span class='d139'><br>Chain bhi, mera dard bhi</span>" },
-  { time: 242.5, Text: "<span class='d140'><br>Meri aashiqui, ab tum hi ho</span>" },
+  { time: 242.5, Text: "<span class='d140'><br>Meri aashiqui, ab tum hi hoo</span>" },
 ];
 
 
