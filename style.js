@@ -140,7 +140,7 @@ const premiumDiv = document.getElementById('premium-div');
 
 
 let backtheme = "home"; //lyrics button toggle karne per home page ya like page ya explore page bahi khule joki khula tha 
-
+let condition = 'a';
 
 function HomeLoader() {
   backtheme = 'home';
@@ -159,6 +159,8 @@ function HomeCloser() {
 };
 
 function ExploreLoader() {
+  history.pushState({page:"explore"}, "explore", "#explore.html");
+  condition = "explore";
   backtheme = 'explore';
   footerMain.style.setProperty('display', 'flex');
   exploreDiv.style.display = 'flex';
@@ -171,6 +173,9 @@ function ExploreCloser() {
 };
 
 function likesLoader() {
+  history.pushState({page:"likes"}, "likes", "#likes.html");
+
+  condition = 'likes';
   backtheme = 'likes';
   footerMain.style.setProperty('display', 'flex');
   likesDiv.style.display = 'flex';
@@ -183,6 +188,9 @@ function likesCloser() {
 };
 
 function PreLoader() {
+  history.pushState({page:"premium"}, "premium", "#premium.html");
+
+  condition = 'pre';
   backtheme = 'pre';
   footerMain.style.display = 'flex';
   premiumDiv.style.display = 'flex';
@@ -247,6 +255,10 @@ function menuBarLoader() {
 };
 
 function loadLyrics() {
+  history.pushState({page:"lyrics"}, "Lyrics", "#lyrics.html");
+
+  condition = 'lyrics';
+
   if (window.getComputedStyle(contOfLyricsDiv).display == "none") {
     HomeCloser();
     menuBarCloser();
@@ -637,7 +649,7 @@ likeSong.addEventListener('click', () => {
 
   };
 
-  likeTemplate.innerHTML = `<div class='song-thumb' id='thumb${myaudioId}'></div>`;
+  likeTemplate.innerHTML = `<div class='song-thumb' id='thumb${myaudioId}'></div><div class='song-title' id='song${myaudioId}'>gungun hi hai</div>`;
   const thumb = document.getElementById(`thumb${myaudioId}`);
   thumb.style.setProperty("background", songThumb.style.background);
 
