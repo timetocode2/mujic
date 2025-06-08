@@ -1,7 +1,7 @@
 document.getElementById("makePaymentBtn").addEventListener("click", () => {
   const upiID = "9580338477@ptyes";  // सही UPI ID डालें
   const name = "Himanshu Singh";
-  const amount = "10000";  // अमाउंट बदल सकते हैं
+  const amount = "7";  // अमाउंट बदल सकते हैं
   const upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&mc=&tid=&tr=&tn=Payment&am=${amount}&cu=INR`;
 
   window.location.href = upiLink;
